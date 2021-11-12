@@ -1,0 +1,5 @@
+npm install react-script
+
+npm install gh-pages --save-dev
+npm install -g gh-pages --save-dev
+npm run  deploy

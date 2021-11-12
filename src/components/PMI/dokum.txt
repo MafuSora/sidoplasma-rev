@@ -1,0 +1,243 @@
+ const PMI1=()=>{
+        return(
+            <div class='right-container'>
+                    <header>
+                        <h1>Yay, puppies! Ensure your pup gets the best care!</h1>
+                        <div class='set'>
+                            <div class='pets-name'>
+                                <label for='pets-name'>ID Pendonor</label>
+                                <input id='pets-name' placeholder="ID Pendonor" type='text'/>
+                            </div>
+                            <div class='pets-name'>
+                                <label for='pets-name'>Nama</label>
+                                <input id='pets-name' placeholder="Nama" type='text'/>
+                            </div>    
+                        </div>
+                        <div class='set'>
+                            <div class='pets-breed'>
+                                <label for='pets-breed'>ID Pegawai PMI</label>
+                                <input id='pets-breed' placeholder="ID Pegawai RS" type='text'/>
+                            </div>
+                            <div class='pets-birthday'>
+                                <label for='pets-birthday'>No. Handphone</label>
+                                <input id='pets-birthday' placeholder='+62' type='text'></input>
+                            </div>
+                        </div>
+                        <div class='set'>
+                            <div class='pets-gender'>
+                                <label for='pet-gender-female'>Jenis Kelamin</label>
+                                <div class='radio-container'>
+                                    <input checked='' id='pet-gender-female' name='pet-gender' type='radio' value='female'/>
+                                    <label for='pet-gender-female'>Female</label>
+                                    <input id='pet-gender-male' name='pet-gender' type='radio' value='male'/>
+                                    <label for='pet-gender-male'>Male</label>
+                                </div>
+                            </div>
+                            <div class='pets-birthday'>
+                                <label for='pets-birthday'>Tanggal Pendonor</label>
+                                <input id='pets-birthday' placeholder='DD/MM/YYYY' type='text'></input>
+                            </div>
+                            
+                        </div>
+                        <div class='pets-weight'>
+                            <label for='pet-weight-0-25'>Alamat</label>
+                            <div class='radio-container'>
+                                <input  id='pet-weight-0-25' name='pet-weight' type='text'  placeholder='Alamat'/>
+                                
+                            </div>
+                        </div>
+                    </header>
+                    <footer>
+                        <div class='set'>
+                            <button id='back'>Back</button>
+                            <button id='next'>Next</button>
+                        </div>
+                    </footer>
+                </div>);
+    }
+    const PMI2=()=>{
+        return(
+            <div>
+                <header>
+                <h1>Yay, puppies! Ensure your pup gets the best care!</h1>
+                <div class='set'>
+                    <div class='pets-name'>
+                        <label for='pets-name'>ID Pegawai PMI</label>
+                        <input id='pets-name' placeholder="ID Pegawai PMI" type='text'/>
+                    </div>
+                    <div class='pets-name'>
+                        <label for='pets-name'>Nama</label>
+                        <input id='pets-name' placeholder="Nama" type='text'/>
+                    </div>    
+                </div>
+                <div class='set'>
+                    <div class='pets-breed'>
+                        <label for='pets-breed'>ID PMI</label>
+                        <input id='pets-breed' placeholder="ID PMI" type='text'/>
+                    </div>
+                    <div class='pets-gender'>
+                        <label for='pet-gender-female'>Jenis Kelamin</label>
+                        <div class='radio-container'>
+                            <input checked='' id='pet-gender-female' name='pet-gender' type='radio' value='female'/>
+                            <label for='pet-gender-female'>Female</label>
+                            <input id='pet-gender-male' name='pet-gender' type='radio' value='male'/>
+                            <label for='pet-gender-male'>Male</label>
+                        </div>
+                    </div>
+                    <div class='pets-birthday'>
+                        <label for='pets-birthday'>Usia</label>
+                        <input id='pets-birthday' placeholder='Usia' type='text'></input>
+                    </div>
+                </div>
+                <div class='set'>
+                    <div class='pets-birthday'>
+                            <label for='pets-birthday'>No. Handphone</label>
+                            <input id='pets-birthday' placeholder='+62' type='text'></input>
+                    </div>
+                    <div class='pets-birthday'>
+                        <label for='pets-birthday'>Username</label>
+                        <input id='pets-birthday' placeholder='Username' type='text'></input>
+                    </div>
+                    <div class='pets-birthday'>
+                        <label for='pets-birthday'>Password</label>
+                        <input id='pets-birthday' placeholder='Password' type='text'></input>
+                    </div>
+                </div>
+                <div class='pets-weight'>
+                    <label for='pet-weight-0-25'>Alamat</label>
+                    <div class='radio-container'>
+                        <input  id='pet-weight-0-25' name='pet-weight' type='text'  placeholder='Alamat'/>
+                        
+                    </div>
+                </div>
+            </header>
+            <footer>
+                <div class='set'>
+                    <button id='back'>Back</button>
+                    <button id='next'>Next</button>
+                </div>
+            </footer>
+    </div>);
+    }
+    const PMI3=()=>{
+        return(
+            <div class='right-container'>
+                    <header>
+                        <h1>Yay, puppies! Ensure your pup gets the best care!</h1>
+                        <div class='set'>
+                            <div class='pets-name'>
+                                <label for='pets-name'>ID PMI</label>
+                                <input id='pets-name' placeholder="ID PMI" type='text'/>
+                            </div>
+                            <div class='pets-name'>
+                                <label for='pets-name'>Nama PMI</label>
+                                <input id='pets-name' placeholder="Nama PMI" type='text'/>
+                            </div>    
+                        </div>
+                        <div class='set'>
+                            <div class='pets-breed'>
+                                <label for='pets-breed'>ID PMI</label>
+                                <input id='pets-breed' placeholder="ID PMI" type='text'/>
+                            </div>
+                            <div class='pets-gender'>
+                                <label for='pet-gender-female'>Jenis Kelamin</label>
+                                <div class='radio-container'>
+                                    <input checked='' id='pet-gender-female' name='pet-gender' type='radio' value='female'/>
+                                    <label for='pet-gender-female'>Female</label>
+                                    <input id='pet-gender-male' name='pet-gender' type='radio' value='male'/>
+                                    <label for='pet-gender-male'>Male</label>
+                                </div>
+                            </div>
+                            <div class='pets-birthday'>
+                                <label for='pets-birthday'>Usia</label>
+                                <input id='pets-birthday' placeholder='Usia' type='text'></input>
+                            </div>
+                            <div class='pets-birthday'>
+                                    <label for='pets-birthday'>No. Telephone</label>
+                                    <input id='pets-birthday' placeholder='(0341) XXXXXX' type='text'></input>
+                            </div>
+                        </div>
+                        <div class='pets-weight'>
+                            <label for='pet-weight-0-25'>Alamat</label>
+                            <div class='radio-container'>
+                                <input  id='pet-weight-0-25' name='pet-weight' type='text'  placeholder='Alamat'/>
+                                
+                            </div>
+                        </div>
+                    </header>
+                    <footer>
+                        <div class='set'>
+                            <button id='back'>Back</button>
+                            <button id='next'>Next</button>
+                        </div>
+                    </footer>
+                </div>);
+    }
+    const PMI4=()=>{
+        return(
+            <div class='right-container'>
+                    <header>
+                        <h1>Yay, puppies! Ensure your pup gets the best care!</h1>
+                        <div class='set'>
+                            <div class='pets-name'>
+                                <label for='pets-name'>ID Inventori Plasma</label>
+                                <input id='pets-name' placeholder="ID Inventori Plasma" type='text'/>
+                            </div>
+                            <div class='pets-name'>
+                                <label for='pets-name'>ID Pendonor</label>
+                                <input id='pets-name' placeholder="ID Pendonor" type='text'/>
+                            </div>
+                            <div class='pets-breed'>
+                                <label for='pets-breed'>ID PMI</label>
+                                <input id='pets-breed' placeholder="ID PMI" type='text'/>
+                            </div>    
+                        </div>
+                        <div class='set'>
+                            
+                            <div class='pets-gender'>
+                                <label for='pet-gender-female'>Golongan Darah </label>
+                                <div class='radio-container'>
+                                    <input checked='' id='pet-gender-female' name='pet-gender' type='radio' value='female'/>
+                                    <label for='pet-gender-female'>Female</label>
+                                    <input id='pet-gender-male' name='pet-gender' type='radio' value='male'/>
+                                    <label for='pet-gender-male'>Male</label>
+                                </div>
+                            </div>
+                            <div class='pets-birthday'>
+                                <label for='pets-birthday'>Rhesus</label>
+                                <input id='pets-birthday' placeholder='Usia' type='text'></input>
+                            </div>
+                            <div class='pets-birthday'>
+                                    <label for='pets-birthday'>Tanggal Pendonor</label>
+                                    <input id='pets-birthday' placeholder='DD/MM/YYYY' type='text'></input>
+                            </div>
+                            <div class='pets-birthday'>
+                                    <label for='pets-birthday'>Tanggal Kadaluarsa</label>
+                                    <input id='pets-birthday' placeholder='DD/MM/YYYY' type='text'></input>
+                            </div>
+                        </div>
+                    </header>
+                    <footer>
+                        <div class='set'>
+                            <button id='back'>Back</button>
+                            <button id='next'>Next</button>
+                        </div>
+                    </footer>
+                </div>);
+    }
+    const [name,setName]=useState(PMI1)
+
+
+
+
+        const radios = [
+      { name: 'Pendonor', value: '1'  },
+      { name: 'Pegawai PMI', value: '2' },
+      { name: 'PMI', value: '3' },
+      { name: 'Inventori Plasma', value: '4' },
+
+          const radios = [
+      { name: 'Pendonor', value: '1',right_container:setName(PMI1)  },
+      { name: 'Pegawai PMI', value: '2' ,right_container:setName(PMI2)},
+      { name: 'PMI', value: '3',right_container:setName(PMI3) },
+      { name: 'Inventori Plasma', value: '4',right_container:setName(PMI4) },
