@@ -6,8 +6,7 @@ import Login from './components/login/login';
 import Navbar from './components/navbar/navbar';
 import Menu1 from './components/PMI/PMI_Main_Menu'
 import Menu2 from './components/Faskes/Faskes_Main_Menu'
-import Menu3 from './components/Menu/Main_Menu'
-import Menu4 from './components/Tabel_PMI/Tabel_PMI'
+import Menu3 from './components/Tabel_PMI/Tabel_PMI'
 import { BrowserRouter as Router, Route, Redirect,Switch } from 'react-router-dom';
 import { useAuth } from './auth/auth-hook';
 import { AuthContext } from './auth/auth-context';
@@ -37,7 +36,7 @@ function App() {
                   <Menu3></Menu3>
                 </Route>
                 <Route path="/menu4">
-                  <Menu4></Menu4>
+                  {/* <Menu4></Menu4> */}
                 </Route>
                 <Redirect to="/"/>
               </Switch>
