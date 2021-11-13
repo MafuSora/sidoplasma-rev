@@ -14,7 +14,7 @@ const Faskes_Konten_1=()=>{
     ];
     return(
         <div className="containutama" >
-            <div class='signup-container'>
+            <div className='signup-container'>
                 <div class='right-container'>
                     <header>
                         <h1>Input Data Pendonor</h1>
