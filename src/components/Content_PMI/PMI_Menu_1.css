@@ -8,7 +8,7 @@
 
 .body {
     align-items: center;
-    background: #D8AA96;
+    background: #d22d16;
     color: rgba(0, 0, 0, 0.8);
     display: grid;
     font-family: "Montserrat", sans-serif;
@@ -58,7 +58,7 @@
 }
 
 .left-container h1 i {
-    background: #F7B1AB;
+    background: #d22d16;
     border-radius: 50%;
     color: #807182;
     font-size: 24px;
@@ -90,7 +90,7 @@
 }
 
 .right-container {
-    background: #f9c7c2;
+    background: #d22d16;
     display: grid;
     grid-template-areas: "."".";
     width: 100%;
@@ -232,7 +232,7 @@
 }
 
 .radio-container input[type=radio]:checked+label {
-    background: #F7B1AB;
+    background: #d22d16;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
