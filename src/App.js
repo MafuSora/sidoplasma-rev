@@ -47,7 +47,14 @@ function App() {
                 <Route path="/menu3">
                   <Menu3></Menu3>
                 </Route>
+<<<<<<< HEAD
                 <Redirect to="/" />
+=======
+                <Route path="/menu4">
+                  {/* <Menu4></Menu4> */}
+                </Route>
+                <Redirect to="/"/>
+>>>>>>> c26b23cab186480accfdf8b66c92731f7b2ae5e5
               </Switch>
             </main>
             <Footer></Footer>
