@@ -22,6 +22,9 @@ const Navibar = () => {
           <Nav.Link href="/menu1" className = "textnavbar" >PMI</Nav.Link>
           <Nav.Link href="/menu2" className = "textnavbar">RS</Nav.Link>
           <Nav.Link href="/menu4" className = "textnavbar">Laporan</Nav.Link>
+          <Nav.Link href="/Tabel1" className = "textnavbar">Tabel</Nav.Link>
+          <Nav.Link href="/aboutus" className = "textnavbar">About Us</Nav.Link>
+        
         </Nav>
         <div className="ms-auto">
           <Form className="d-flex">

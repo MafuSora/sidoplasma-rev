@@ -8,6 +8,13 @@ import Menu1 from './components/PMI/PMI_Main_Menu';
 import Menu2 from './components/Faskes/Faskes_Main_Menu';
 import Menu3 from './components/Menu/Main_Menu';
 import Menu4 from './components/About_Us/about';
+
+import AboutUs from './components/About_Us/about';
+import Tabel1 from './components/Tabel_PMI/Tabel_PMI';
+// import Menu2 from './components/Faskes/Faskes_Main_Menu';
+// import Menu3 from './components/Menu/Main_Menu';
+// import Menu4 from './components/About_Us/about';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -50,6 +57,12 @@ function App() {
                 </Route>
                 <Route path="/menu4">
                   <Menu4></Menu4>
+                </Route>
+                <Route path="/Tabel1">
+                  <Tabel1></Tabel1>
+                </Route>
+                <Route path="/aboutus">
+                  <AboutUs></AboutUs>
                 </Route>
                 <Redirect to="/"/>
               </Switch>
