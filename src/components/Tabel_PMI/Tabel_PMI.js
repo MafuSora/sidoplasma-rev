@@ -18,7 +18,6 @@ const Menu3=()=>{
         { name: 'Radio', value: '4' },
       ];
     return(
-        
         <Table striped bordered hover size="sm">
             <thead>
                 <tr>
