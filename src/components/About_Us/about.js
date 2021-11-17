@@ -2,6 +2,12 @@ import { Button, ButtonGroup,ToggleButton } from 'react-bootstrap';
 import reactDom from 'react-dom';
 import react,{useState} from 'react';
 import suntik from '../img/suntik.png';
+import gambar1 from "../img/wallpaper.jpg";
+import gambar2 from "../img/covid.jpg";
+import card1 from "../img/hubungi.jpg";
+import card2 from "../img/verifikasi.jpg";
+import card3 from "../img/berhasil.jpg";
+// import gambar3 from "../img/newnormal.jpg"
 import './about.css'
 import { Card, Row, Col,CardGroup } from 'react-bootstrap';
 const Faskes_Konten_1=()=>{
@@ -12,16 +18,38 @@ const Faskes_Konten_1=()=>{
     
     return(
         <div className="framebody">
-            <div>
-                        <div className="background p-2">
+            <div className="carousel-inner">
+                <div className="carousel-item active">
+                    <img src={gambar1} alt="..." width="100%" height="100%"></img>
+                    <div className="carousel-caption d-none d-md-block">
                         {/* <img src="https://i.pinimg.com/564x/22/2e/40/222e4048c228885608cc11aa7cc608b2.jpg" className="carousel slide m-4 rounded ukuran" alt="..." className="suntik"/> */}
-                            <h1>Selamat Datang</h1>
-                            <p>Penggunaan media berupa website yang terintegrasi dengan auto message digunakan untuk pendataan calon pendonor plasma konvalesen COVID-19 oleh berbagai fasilitas kesehatan dan dapat diakses oleh Palang Merah Indonesia (PMI).</p>
-                            <a href="#" className="btn btn-lg btn-danger"> Gabung Sekarang </a>
-                        </div>
+                        <h5>Selamat Datang</h5>
+                        <p>Sidoplasma merupakan website yang terintegrasi dengan auto message digunakan untuk pendataan calon pendonor plasma konvalesen COVID-19 oleh berbagai fasilitas kesehatan dan dapat diakses oleh Palang Merah Indonesia (PMI).</p>
+                        <a href="#" className="btn btn-lg btn-danger"> Gabung Sekarang </a>
+                    </div>
+                </div>
+                <div className="carousel-item active">
+                    <img src={gambar2} alt="..." width="100%" height="100%"></img>
+                    <div className="carousel-caption d-none d-md-block">
+                        {/* <img src="https://i.pinimg.com/564x/22/2e/40/222e4048c228885608cc11aa7cc608b2.jpg" className="carousel slide m-4 rounded ukuran" alt="..." className="suntik"/> */}
+                        <h5>Selamat Datang</h5>
+                        <p>Sidoplasma merupakan website yang terintegrasi dengan auto message digunakan untuk pendataan calon pendonor plasma konvalesen COVID-19 oleh berbagai fasilitas kesehatan dan dapat diakses oleh Palang Merah Indonesia (PMI).</p>
+                        <a href="#" className="btn btn-lg btn-danger"> Gabung Sekarang </a>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>   
+
                         <CardGroup className="p-2">
                                 <Card >
-                                    <Card.Img variant="top" src="holder.js/100px160" />
+                                    <Card.Img variant="top" src={card1} className ="card"/>
                                     <Card.Body>
                                     <Card.Title>Card title</Card.Title>
                                     <Card.Text>
@@ -34,7 +62,7 @@ const Faskes_Konten_1=()=>{
                                     </Card.Footer>
                                 </Card>
                                 <Card>
-                                    <Card.Img variant="top" src="holder.js/100px160" />
+                                    <Card.Img variant="top" src={card2} className ="card"  />
                                     <Card.Body>
                                     <Card.Title>Card title</Card.Title>
                                     <Card.Text>
@@ -47,7 +75,7 @@ const Faskes_Konten_1=()=>{
                                     </Card.Footer>
                                 </Card>
                                 <Card>
-                                    <Card.Img variant="top" src="holder.js/100px160" />
+                                    <Card.Img variant="top" src={card3} className ="card" />
                                     <Card.Body>
                                     <Card.Title>Card title</Card.Title>
                                     <Card.Text>
@@ -60,8 +88,7 @@ const Faskes_Konten_1=()=>{
                                     <small className="text-muted">Last updated 3 mins ago</small>
                                     </Card.Footer>
                                 </Card>
-                            </CardGroup>
-            </div>
+                        </CardGroup>
         </div>
                             
    
