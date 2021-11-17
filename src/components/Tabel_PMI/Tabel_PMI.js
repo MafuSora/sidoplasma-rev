@@ -9,15 +9,10 @@ import {Table} from 'react-bootstrap';
 
 const Menu3=()=>{
     const [checked, setChecked] = useState(false);
-    const [radioValue, setRadioValue] = useState('1');const Menu3=()=>{
+    const [radioValue, setRadioValue] = useState('1');
     
-    const radios = [
-        { name: 'Active', value: '1' },
-        { name: 'Radio', value: '2' },
-        { name: 'Radio', value: '3' },
-        { name: 'Radio', value: '4' },
-      ];
     return(
+        <div className="containutama" >
         <Table striped bordered hover size="sm">
             <thead>
                 <tr>
@@ -47,7 +42,7 @@ const Menu3=()=>{
                 </tr>
             </tbody>
         </Table>
+        </div>
     );
     }
-}
 export default Menu3

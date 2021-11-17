@@ -90,7 +90,7 @@
 }
 
 .right-container {
-    background: #d22d16 ;
+    background: #d22d16;
     display: grid;
     grid-template-areas: "."".";
     width: 100%;
@@ -241,5 +241,5 @@
 }
 
 .alamat {
-    width: 100% !important;
+    /* width: 100% !important; */
 }

@@ -10,14 +10,14 @@ const Navibar = () => {
   return (
     
  
-    <Navbar className="uwu" variant="dark" expand="lg" sticky="top">
+    <Navbar className=" uwu" variant="light" expand="lg" sticky="top">
       
       <Navbar.Brand href="/" ><Image   src="" className="imagelogo m-1" fluid ></Image></Navbar.Brand>
       <Image className="sidoplasma" src={logo} />
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
           
-        <Nav className="me-auto ">
+        <Nav className="me-auto p-4 ">
           <Nav.Link href="/" className = "textnavbar" activeClassName="activetextnavbar" exact={true}>Home</Nav.Link>
           <Nav.Link href="/menu1" className = "textnavbar" >PMI</Nav.Link>
           <Nav.Link href="/menu2" className = "textnavbar">RS</Nav.Link>
@@ -26,14 +26,14 @@ const Navibar = () => {
           <Nav.Link href="/aboutus" className = "textnavbar">About Us</Nav.Link>
         
         </Nav>
-        <div className="ms-auto">
-          <Form className="d-flex">
-              <div class = "button">
+        
+          <Form className="d-flex ">
+              <div class = "button p-2">
                 <Button variant="outline-danger" className="profile" >Profile </Button>
                 {/* <Button variant="outline-danger" size = "sm">Sign Up </Button> */}
               </div>
           </Form>
-        </div>  
+       
       </Navbar.Collapse>
      
     </Navbar>

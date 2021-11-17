@@ -10,7 +10,7 @@ import Menu3 from './components/Menu/Main_Menu';
 import Menu4 from './components/About_Us/about';
 
 import AboutUs from './components/About_Us/about';
-import Tabel1 from './components/Tabel_PMI/Tabel_PMI';
+import Tabel1 from './components/Menu_Tabel_PMI/Menu_Tabel_PMI';
 // import Menu2 from './components/Faskes/Faskes_Main_Menu';
 // import Menu3 from './components/Menu/Main_Menu';
 // import Menu4 from './components/About_Us/about';
