@@ -68,7 +68,6 @@ const Faskes_Konten_1=()=>{
                                 <label for='pets-birthday'>Tanggal Sembuh</label>
                                 <input id='pets-birthday' placeholder='DD/MM/YYYY' type='date'></input>
                             </div>
-                           
                         </div>
                         <div class='pets-weight'>
                             <label for='pet-weight-0-25'>Alamat</label>
