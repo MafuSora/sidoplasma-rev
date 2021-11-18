@@ -10,7 +10,7 @@ import Menu3 from './components/Menu/Main_Menu';
 import Menu4 from './components/About_Us/about';
 import AboutUs from './components/About_Us/about';
 import Tabel1 from './components/PMI_Tabel/Menu_Tabel_PMI';
-import Tabel2 from './components/Faskes_Tabel/Menu_Tabel_Faskes';
+import Tabel2 from './components/Faskes_Tabel_Menu/Faskes_Main_Menu';
 // import Menu2 from './components/Faskes/Faskes_Main_Menu';
 // import Menu3 from './components/Menu/Main_Menu';
 // import Menu4 from './components/About_Us/about';
@@ -67,8 +67,9 @@ function App() {
                 <Redirect to="/"/>
               </Switch>
             </main>
-            <Footer></Footer>
+            
           </Router>
+          <Footer />
         </div>
       </div>
     </AuthContext.Provider>

@@ -17,9 +17,8 @@ const Faskes_Konten_1=()=>{
 
     
     return(
-        <div className="framebody">
-            <div className="carousel-inner">
-                <div className="carousel-item active">
+        <div className="">
+                <div className="Container active p-2">
                     <img src={gambar1} alt="..." width="100%" height="100%"></img>
                     <div className="carousel-caption d-none d-md-block">
                         {/* <img src="https://i.pinimg.com/564x/22/2e/40/222e4048c228885608cc11aa7cc608b2.jpg" className="carousel slide m-4 rounded ukuran" alt="..." className="suntik"/> */}
@@ -28,7 +27,7 @@ const Faskes_Konten_1=()=>{
                         <a href="#" className="btn btn-lg btn-danger"> Gabung Sekarang </a>
                     </div>
                 </div>
-                <div className="carousel-item active">
+                <div className="Container active p-2">
                     <img src={gambar2} alt="..." width="100%" height="100%"></img>
                     <div className="carousel-caption d-none d-md-block">
                         {/* <img src="https://i.pinimg.com/564x/22/2e/40/222e4048c228885608cc11aa7cc608b2.jpg" className="carousel slide m-4 rounded ukuran" alt="..." className="suntik"/> */}
@@ -36,17 +35,8 @@ const Faskes_Konten_1=()=>{
                         <p>Sidoplasma merupakan website yang terintegrasi dengan auto message digunakan untuk pendataan calon pendonor plasma konvalesen COVID-19 oleh berbagai fasilitas kesehatan dan dapat diakses oleh Palang Merah Indonesia (PMI).</p>
                         <a href="#" className="btn btn-lg btn-danger"> Gabung Sekarang </a>
                     </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>   
-
+                </div>   
+                <div className="Container active">
                         <CardGroup className="p-2">
                                 <Card >
                                     <Card.Img variant="top" src={card1} className ="card"/>
@@ -89,6 +79,7 @@ const Faskes_Konten_1=()=>{
                                     </Card.Footer>
                                 </Card>
                         </CardGroup>
+                    </div>
         </div>
                             
    
