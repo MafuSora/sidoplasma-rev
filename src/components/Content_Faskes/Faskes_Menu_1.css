@@ -90,13 +90,12 @@
 }
 
 .right-container {
-    background: #d22d16;
+    background: #f9c7c2;
     display: grid;
     grid-template-areas: "."".";
     width: 100%;
-    padding: 0.2em;
-    margin: 0.2em;
-    border-radius: 10px;
+    padding: 4px;
+    margin: 1em;
 }
 
 .right-container h1:nth-of-type(1) {
@@ -165,8 +164,6 @@
     background: #fff;
     display: grid;
     padding: 5px 40px;
-    margin: 5px;
-    border-radius: 5px;
 }
 
 .right-container footer button {
@@ -241,5 +238,5 @@
 }
 
 .alamat {
-    /* width: 100% !important; */
+    width: 100% !important;
 }
