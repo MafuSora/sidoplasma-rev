@@ -234,3 +234,8 @@
     background: #F7B1AB;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.table{
+    text-align: center;
+    font-size: 11px;
+}

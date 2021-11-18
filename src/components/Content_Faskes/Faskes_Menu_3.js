@@ -7,10 +7,10 @@ const Faskes_Konten_2=()=>{
     const [radioValue, setRadioValue] = useState('1');
 
     const radios = [
-    { name: 'Active', value: '1' },
-    { name: 'Radio', value: '2' },
-    { name: 'Radio', value: '3' },
-    { name: 'Radio', value: '4' },
+    { name: 'Pasien Positif', value: '1'  },
+    { name: 'Pegawai Faskes', value: '2' },
+    { name: 'Faskes', value: '3' },
+    { name: 'Data Permintaan Donor', value: '4' },
     ];
     return(
         <div className="containutama" >

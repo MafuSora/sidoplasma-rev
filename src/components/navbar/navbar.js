@@ -18,12 +18,12 @@ const Navibar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
           
         <Nav className="me-auto p-4 ">
-          <Nav.Link href="/" className = "textnavbar" activeClassName="activetextnavbar" exact={true}>Home</Nav.Link>
-          <Nav.Link href="/menu1" className = "textnavbar" >PMI</Nav.Link>
-          <Nav.Link href="/menu2" className = "textnavbar">RS</Nav.Link>
-          <Nav.Link href="/menu4" className = "textnavbar">Laporan</Nav.Link>
-          <Nav.Link href="/Tabel1" className = "textnavbar">Tabel</Nav.Link>
-          <Nav.Link href="/aboutus" className = "textnavbar">About Us</Nav.Link>
+          <Nav.Link href="/" className = "textnavbar" activeClassName="activetextnavbar" exact={true}>Login</Nav.Link>
+          <Nav.Link href="/menu1" className = "textnavbar" >Faskes</Nav.Link>
+          <Nav.Link href="/menu2" className = "textnavbar">PMI</Nav.Link>
+          <Nav.Link href="/menu4" className = "textnavbar">About Us</Nav.Link>
+          <Nav.Link href="/Tabel1" className = "textnavbar">Tabel PMI</Nav.Link>
+          <Nav.Link href="/Tabel2" className = "textnavbar">Tabel Faskes</Nav.Link>
         
         </Nav>
         
