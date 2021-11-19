@@ -91,10 +91,9 @@
 
 .right-container {
     background: #f9c7c2;
-    display: grid;
+    /* display: flex; */
     grid-template-areas: "."".";
-    width: 100%;
-    padding: 4px;
+    width: 1800px;
     margin: 1em;
 }
 
@@ -203,7 +202,6 @@
 .pets-weight label {
     display: block;
     margin-bottom: 5px;
-    width: auto;
 }
 
 .radio-container {
@@ -237,6 +235,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.alamat {
-    width: 100% !important;
+.table {
+    text-align: center;
+    font-size: 11px;
 }

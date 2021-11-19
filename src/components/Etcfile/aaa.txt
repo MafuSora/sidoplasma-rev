@@ -1,0 +1,10 @@
+                        ID Pasien ok
+                        ID Pegawai Faskes ok
+                           Nama ok 
+                            Alamat 
+                           No Handphone
+                           Tanggal Sembuh ok
+                           Usia ok
+                           Golongan Darah
+                           Rhesus
+                           Komorbid ok

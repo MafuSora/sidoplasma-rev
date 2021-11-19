@@ -1,17 +1,5 @@
-import './PMI_Menu_1.css'
-import { Button, ButtonGroup,ToggleButton } from 'react-bootstrap';
-import reactDom from 'react-dom';
-import react,{useState} from 'react';
-const Faskes_Konten_2=()=>{
-    const [checked, setChecked] = useState(false);
-    const [radioValue, setRadioValue] = useState('1');
-
-    const radios = [
-    { name: 'Active', value: '1' },
-    { name: 'Radio', value: '2' },
-    { name: 'Radio', value: '3' },
-    { name: 'Radio', value: '4' },
-    ];
+import './PMI_Form.css'
+const PMI_Form_Cabang=()=>{
     return(
         <div className="containutama" >
             <div class='signup-container'>
@@ -52,4 +40,4 @@ const Faskes_Konten_2=()=>{
     
     );
 }
-export default Faskes_Konten_2
+export default PMI_Form_Cabang

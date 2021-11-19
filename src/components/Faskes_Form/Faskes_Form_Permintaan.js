@@ -1,49 +1,34 @@
-import './PMI_Menu_1.css'
-import { Button, ButtonGroup,ToggleButton } from 'react-bootstrap';
-import reactDom from 'react-dom';
-import react,{useState} from 'react';
-const Faskes_Konten_2=()=>{
-    const [checked, setChecked] = useState(false);
-    const [radioValue, setRadioValue] = useState('1');
-
-    const radios = [
-    { name: 'Active', value: '1' },
-    { name: 'Radio', value: '2' },
-    { name: 'Radio', value: '3' },
-    { name: 'Radio', value: '4' },
-    ];
+import './Faskes_Form.css'
+const Faskes_Form_Permintaan=()=>{
     return(
         <div className="containutama" >
             <div class='signup-container'>
                 <div class='right-container'>
-                    <header>
+                <header>
                     <h1>Input Data Inventori Plasma</h1>
                         <br/>
                         <div class='set'>
                             <div class='pets-name'>
-                                <label for='pets-name'>ID Inventori Plasma</label>
-                                <input id='pets-name' placeholder="ID Inventori Plasma" type='text'/>
+                                <label for='pets-name'>ID Data Permintaan Donor</label>
+                                <input id='pets-name' placeholder="ID Data Permintaan Donor" type='text'/>
                             </div>
                             <div class='pets-breed'>
-                                <label for='pets-breed'>ID PMI</label>
-                                <input id='pets-breed' placeholder="ID PMI" type='text'/>
+                                <label for='pets-breed'>ID Pegawai Faskes</label>
+                                <input id='pets-breed' placeholder="ID Pegawai Faskes" type='text'/>
                             </div>    
                             <div class='pets-name'>
-                                <label for='pets-name'>Cabang PMI</label>
-                                <input id='pets-name' placeholder="Cabang PMI" type='text'/>
+                                <label for='pets-name'>Nama Pegawai Faskes </label>
+                                <input id='pets-name' placeholder="Nama Pegawai Faskes" type='text'/>
                             </div>
                         </div>
                         <div class='set'>
+                            
                             <div class='pets-name'>
-                                <label for='pets-name'>ID Pendonor</label>
-                                <input id='pets-name' placeholder="ID Pendonor" type='text'/>
-                            </div>
-                            <div class='pets-name'>
-                                <label for='pets-name'>Nama Pendonor</label>
-                                <input id='pets-name' placeholder="Nama Pendonor" type='text'/>
+                                <label for='pets-name'>Nama Peminta Donor</label>
+                                <input id='pets-name' placeholder="Nama Peminta Donor" type='text'/>
                             </div>
                             <div class='pets-birthday'>
-                                    <label for='pets-birthday'>Tanggal Pendonor</label>
+                                    <label for='pets-birthday'>Tanggal Permintaaan </label>
                                     <input id='pets-birthday' placeholder='DD/MM/YYYY' type='date'></input>
                             </div>
                             
@@ -62,12 +47,6 @@ const Faskes_Konten_2=()=>{
                                     <label for='pet-gender-AB'>AB</label>
                                 </div>
                             </div>
-                            <div class='pets-birthday'>
-                                    <label for='pets-birthday'>Tanggal Kadaluarsa</label>
-                                    <input id='pets-birthday' placeholder='DD/MM/YYYY' type='date'></input>
-                            </div>
-                        </div>
-                        <div class="set">
                             <div class='pets-gender'>
                                 <label for='pet-gender-female'>Rhesus </label>
                                 <div class='radio-container'>
@@ -77,6 +56,9 @@ const Faskes_Konten_2=()=>{
                                     <label for='pet-gender-male2'>-</label>
                                 </div>
                             </div>
+                        </div>
+                        <div class="set">
+                            
                         </div>
                     </header>
                     <footer>
@@ -91,4 +73,4 @@ const Faskes_Konten_2=()=>{
     
     );
 }
-export default Faskes_Konten_2
+export default Faskes_Form_Permintaan
