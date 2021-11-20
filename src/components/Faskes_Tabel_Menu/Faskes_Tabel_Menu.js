@@ -1,10 +1,10 @@
 import './Faskes_Tabel_Menu.css'
 import {ButtonGroup,ToggleButton} from 'react-bootstrap';
 import {useState} from 'react';
-import TabelFaskes1 from '../Faskes_Tabel/Menu_Tabel_Faskes';
-import TabelFaskes2 from '../Faskes_Tabel/Menu_Tabel_Faskes2';
-import TabelFaskes3 from '../Faskes_Tabel/Menu_Tabel_Faskes3';
-import TabelFaskes4 from '../Faskes_Tabel/Menu_Tabel_Faskes4';
+import TabelFaskesPasien from '../Faskes_Tabel/Tabel_Faskes_Pasien';
+import TabelFaskesPegawai from '../Faskes_Tabel/Tabel_Faskes_Pegawai';
+import TabelFaskesCabang from '../Faskes_Tabel/Tabel_Faskes_Cabang';
+import TabelFaskesPermintaan from '../Faskes_Tabel/Tabel_Faskes_Permintaan';
 const Faskes_Tabel_Menu=(props)=>{
     const [radioValue, setRadioValue] = useState('1');
     const [name,setName]=useState("1")
@@ -51,10 +51,10 @@ const Faskes_Tabel_Menu=(props)=>{
                     </div>
                 </div>
                 <div>
-                    {name==="1" && <TabelFaskes1/>}
-                    {name==="2" && <TabelFaskes2/>}
-                    {name==="3" && <TabelFaskes3/>}
-                    {name==="4" && <TabelFaskes4/>}
+                    {name==="1" && <TabelFaskesPasien/>}
+                    {name==="2" && <TabelFaskesPegawai/>}
+                    {name==="3" && <TabelFaskesCabang/>}
+                    {name==="4" && <TabelFaskesPermintaan/>}
                 </div>
             </div>
         </div>

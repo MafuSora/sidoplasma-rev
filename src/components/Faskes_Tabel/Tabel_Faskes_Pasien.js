@@ -1,4 +1,4 @@
-import './Menu_Tabel_Faskes.css'
+import './Tabel_Faskes.css'
 // import { MDBDataTable } from 'mdbreact';
 
 

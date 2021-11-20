@@ -10,7 +10,7 @@ const Faskes_Form_Cabang=()=>{
                         <br/>
                         <div class='set'>
                             <div class='pets-name'>
-                                <label for='pets-name'>ID Fasilitas Kesehatan</label>
+                                <label for='IDFaskes'>ID Fasilitas Kesehatan</label>
                                 <input id='pets-name' placeholder="ID Fasilitas Kesehatan" type='text'/>
                             </div>
                             <div class='pets-name'>

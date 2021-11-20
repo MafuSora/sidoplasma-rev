@@ -1,4 +1,4 @@
-import './Menu_Tabel_Faskes.css'
+import './Tabel_Faskes.css'
 const Tabel_Faskes_Pegawai=(props)=>{
     return(
         <div className="containutama" >

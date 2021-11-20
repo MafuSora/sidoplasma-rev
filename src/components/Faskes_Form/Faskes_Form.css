@@ -96,6 +96,7 @@
     width: 100%;
     padding: 4px;
     margin: 1em;
+    border-radius: 10px;
 }
 
 .right-container h1:nth-of-type(1) {
@@ -163,7 +164,9 @@
     align-items: center;
     background: #fff;
     display: grid;
-    padding: 5px 40px;
+    padding: 10px 40px;
+    margin: 5px;
+    border-radius: 7px;
 }
 
 .right-container footer button {
@@ -211,7 +214,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     display: inline-block;
-    padding: 5px;
+
 }
 
 .radio-container label {

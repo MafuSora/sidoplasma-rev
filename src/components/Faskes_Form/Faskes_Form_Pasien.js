@@ -1,5 +1,5 @@
 import './Faskes_Form.css'
-import {  Form, useFormik } from 'formik';
+import {Form, useFormik} from 'formik';
 const validate = values => {
     const errors = {};
     if (!values.firstName) {
@@ -47,7 +47,7 @@ const Faskes_Form_Pasien=()=>{
                     <header className="konten">
                     <h1>Input Data Fasilitas Kesehatan</h1>
                         <br/>
-                        <Form onSubmit={formik.handleSubmit}>
+                        <form onSubmit={formik.handleSubmit}>
                             <div class='set'>
                                  <div class='pets-name'> {/*petsname */}
                                     <label htmlFor='IDPasien'>ID Pasien</label>
@@ -184,7 +184,7 @@ const Faskes_Form_Pasien=()=>{
                                     </div>
                             </div>
                             </div>
-                        </Form>
+                        </form>
                     </header>
                     <footer>
                         <div class='set'>
