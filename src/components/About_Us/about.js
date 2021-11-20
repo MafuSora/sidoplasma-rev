@@ -19,32 +19,25 @@ const Faskes_Konten_1=()=>{
     return(
         <div className="">
                 <div className="Container active p-2">
-                    <img src={gambar1} alt="..." width="100%" height="100%"></img>
+                    <img src={gambar1} alt="..." width="100%" height="100%" className="gambar" ></img>
                     <div className="carousel-caption d-none d-md-block">
                         {/* <img src="https://i.pinimg.com/564x/22/2e/40/222e4048c228885608cc11aa7cc608b2.jpg" className="carousel slide m-4 rounded ukuran" alt="..." className="suntik"/> */}
-                        <h5>Selamat Datang</h5>
-                        <p>Sidoplasma merupakan website yang terintegrasi dengan auto message digunakan untuk pendataan calon pendonor plasma konvalesen COVID-19 oleh berbagai fasilitas kesehatan dan dapat diakses oleh Palang Merah Indonesia (PMI).</p>
+                        <h1 className="tulisanlanding">Selamat Datang</h1>
+                        <p className="tulisanlanding">Sidoplasma merupakan website yang terintegrasi dengan auto message digunakan untuk pendataan calon pendonor plasma konvalesen COVID-19 oleh berbagai fasilitas kesehatan dan dapat diakses oleh Palang Merah Indonesia (PMI).</p>
                         <a href="#" className="btn btn-lg btn-danger"> Gabung Sekarang </a>
                     </div>
-                </div>
-                <div className="Container active p-2">
-                    <img src={gambar2} alt="..." width="100%" height="100%"></img>
-                    <div className="carousel-caption d-none d-md-block">
-                        {/* <img src="https://i.pinimg.com/564x/22/2e/40/222e4048c228885608cc11aa7cc608b2.jpg" className="carousel slide m-4 rounded ukuran" alt="..." className="suntik"/> */}
-                        <h5>Selamat Datang</h5>
-                        <p>Sidoplasma merupakan website yang terintegrasi dengan auto message digunakan untuk pendataan calon pendonor plasma konvalesen COVID-19 oleh berbagai fasilitas kesehatan dan dapat diakses oleh Palang Merah Indonesia (PMI).</p>
-                        <a href="#" className="btn btn-lg btn-danger"> Gabung Sekarang </a>
-                    </div>
-                </div>   
+                </div>  
                 <div className="Container active">
+                <div>
+                    <h3 id="headerTitle" className="joinus">Bagaimana Cara untuk Bergabung?</h3>
+                </div>
                         <CardGroup className="p-2">
-                                <Card >
-                                    <Card.Img variant="top" src={card1} className ="card"/>
+                                <Card className="card" >
+                                    <Card.Img variant="top" src={card1} className ="kartu" />
                                     <Card.Body>
-                                    <Card.Title>Card title</Card.Title>
-                                    <Card.Text>
-                                        This is a wider card with supporting text below as a natural lead-in to
-                                        additional content. This content is a little bit longer.
+                                    <Card.Title>Kontak Kami!</Card.Title>
+                                    <Card.Text className="tulisankartu">
+                                        Kontak kami melalui email sidoplasmateam@gmail.com dengan menyerahkan beberapa dokumen yang membuktikan bahwa anda berasal dari fasilitas kesehatan yang telah diakui oleh pemerintah
                                     </Card.Text>
                                     </Card.Body>
                                     <Card.Footer>
@@ -52,12 +45,11 @@ const Faskes_Konten_1=()=>{
                                     </Card.Footer>
                                 </Card>
                                 <Card>
-                                    <Card.Img variant="top" src={card2} className ="card"  />
+                                    <Card.Img variant="top" src={card2} className ="kartu"  />
                                     <Card.Body>
-                                    <Card.Title>Card title</Card.Title>
-                                    <Card.Text>
-                                        This card has supporting text below as a natural lead-in to additional
-                                        content.{' '}
+                                    <Card.Title>Verifikasi dan Validasi</Card.Title>
+                                    <Card.Text className="tulisankartu">
+                                        Dokumen yang telah dikirimkan akan kami verifikasi dan validasi, bila sudah terverifikasi akan kami kirimkan email yang berisikan username dan password{' '}
                                     </Card.Text>
                                     </Card.Body>
                                     <Card.Footer>
@@ -65,13 +57,11 @@ const Faskes_Konten_1=()=>{
                                     </Card.Footer>
                                 </Card>
                                 <Card>
-                                    <Card.Img variant="top" src={card3} className ="card" />
+                                    <Card.Img variant="top" src={card3} className ="kartu" />
                                     <Card.Body>
-                                    <Card.Title>Card title</Card.Title>
-                                    <Card.Text>
-                                        This is a wider card with supporting text below as a natural lead-in to
-                                        additional content. This card has even longer content than the first to
-                                        show that equal height action.
+                                    <Card.Title>Pemberian Akun Sidoplasma</Card.Title>
+                                    <Card.Text className="tulisankartu">
+                                        Setelah terverifikasi maka admin akan memberikan akun sidoplasma yang berisikan username dan password agar user dapat mengakses sidoplasma
                                     </Card.Text>
                                     </Card.Body>
                                     <Card.Footer>

@@ -8,7 +8,7 @@
 
 .body {
     align-items: center;
-    background: #D8AA96;
+    background: #D22D16;
     color: rgba(0, 0, 0, 0.8);
     display: grid;
     font-family: "Montserrat", sans-serif;
@@ -28,7 +28,7 @@
 }
 
 .right-container {
-    background: #f9c7c2;
+    background: #D22D16;
     display: grid;
     grid-template-areas: "."".";
     width: 100%;
@@ -170,10 +170,14 @@
 }
 
 .radio-container input[type=radio]:checked+label {
-    background: #F7B1AB;
+    background: #D22D16;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .alamat {
     width: 100% !important;
+}
+
+.right-container{
+    background:#D22D16;
 }
