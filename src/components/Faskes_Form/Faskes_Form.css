@@ -188,14 +188,14 @@
     color: white;
 }
 
-.right-container footer #next {
-    background: #807182;
-    border: 1px solid transparent;
-    color: #fff;
+.submit {
+    background: #fff;
+    transition: 0.2s all ease-in-out;
 }
 
-.right-container footer #next:hover {
+.submit:hover {
     background: #171A2B;
+    color: white;
 }
 
 .pets-name label,

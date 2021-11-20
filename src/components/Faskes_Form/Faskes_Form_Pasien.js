@@ -167,6 +167,7 @@ const Faskes_Form_Pasien=()=>{
                                             <input id='goldar-O' name='kesediaan' type='radio' value='O'/>
                                             <label for='goldar-O'>O</label>
                                         </div>
+                                        
                                 </div>
                             </div>
                             <div className='set'>
@@ -179,6 +180,18 @@ const Faskes_Form_Pasien=()=>{
                                     onChange={formik.handleChange}
                                     value={formik.values.NoHP}
                                     placeholder='+62XXXXXXX'/>
+                                </div>
+                                <div class='pets-gender'>
+                                            <label for='pet-gender-female'>Rhesus </label>
+                                            <div class='radio-container'>
+                                                <input  id='pet-gender-female2' name='pet-gender' type='radio' value='positive'/>
+                                                <label for='pet-gender-female2'>+</label>
+                                                <input id='pet-gender-male2' name='pet-gender' type='radio' value='negative'/>
+                                                <label for='pet-gender-male2'>-</label>
+                                            </div>
+                                </div>
+                                <div class='pets-name'>
+                                    <button className='btn-outline-danger bt-sm  px-4 py-1 mt-4'>Submit</button>
                                 </div>
                             </div>
                         </form>
