@@ -4,16 +4,16 @@ import {useState} from 'react';
 import FaskesFormPasien from '../Faskes_Form/Faskes_Form_Pasien';
 import FaskesFormPegawai from '../Faskes_Form/Faskes_Form_Pegawai';
 import FaskesFormCabang from '../Faskes_Form/Faskes_Form_Cabang';
-import FaskesFormPermintaan from '../Faskes_Form/Faskes_Form_Permintaan';
+// import FaskesFormPermintaan from '../Faskes_Form/Faskes_Form_Permintaan';
 
 const Faskes_Main_Menu=(props)=>{
     const [radioValue, setRadioValue] = useState('1');
     const [name,setName]=useState("1")
     const radios = [
         { name: 'Input Pasien Positif', value: '1'  },
-        { name: 'Pegawai Fasilitas Kesehatan', value: '2' },
-        { name: 'Fasilitas Kesehatan', value: '3' },
-        { name: 'Permintaan Donor Plasma', value: '4' },
+        { name: 'Input Pegawai Fasilitas Kesehatan', value: '2' },
+        { name: 'Input Fasilitas Kesehatan', value: '3' },
+        // { name: 'Permintaan Donor Plasma', value: '4' },
     ];
     return(
         <div className="containutama" >
@@ -55,7 +55,7 @@ const Faskes_Main_Menu=(props)=>{
                     {name==="1" && <FaskesFormPasien/>}
                     {name==="2" && <FaskesFormPegawai/>}
                     {name==="3" && <FaskesFormCabang/>}
-                    {name==="4" && <FaskesFormPermintaan/>}
+                    {/* {name==="4" && <FaskesFormPermintaan/>} */}
                 </div>
             </div>
         </div>

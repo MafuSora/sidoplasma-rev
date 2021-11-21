@@ -9,10 +9,6 @@ const PMI_Form_Cabang=()=>{
                         <br/>
                         <div class='set'>
                             <div class='pets-name'>
-                                <label for='pets-name'>ID PMI</label>
-                                <input id='pets-name' placeholder="ID PMI" type='text'/>
-                            </div>
-                            <div class='pets-name'>
                                 <label for='pets-name'>Nama PMI</label>
                                 <input id='pets-name' placeholder="Nama PMI" type='text'/>
                             </div>    

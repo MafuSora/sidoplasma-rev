@@ -1,5 +1,5 @@
 import './Faskes_Form.css'
-import {Form, useFormik} from 'formik';
+import { useFormik} from 'formik';
 const validate = values => {
     const errors = {};
     if (!values.NamaPasien) {
@@ -49,24 +49,13 @@ const Faskes_Form_Pasien=()=>{
                         <br/>
                         <form onSubmit={formik.handleSubmit}>
                             <div class='set'>
-                                 <div class='pets-name'> {/*petsname */}
-                                    <label htmlFor='IDPasien'>ID Pasien</label>
-                                    <input 
-                                        id='IDPasien'
-                                        name='IDPasien'
-                                        type="text"
-                                        onChange={formik.handleChange}
-                                        value={formik.values.IDPasien}
-                                        placeholder="ID Pasien" 
-                                        />
-                                        {formik.errors.IDPasien ? <div>{formik.errors.IDPasien}</div> : null}
-                                </div>
+                                
                                 <div class='pets-name'>
-                                    <label htmlfor='IDPegawaiFaskes'>ID Pegawai Faskes</label>
+                                    <label htmlfor='NamaPegawaiFaskes'>Nama Pegawai Faskes</label>
                                     <input 
-                                        id='IDPegawaiFaskes' 
-                                        name='IDPegawaiFaskes' 
-                                        placeholder="ID Pegawai Faskes" 
+                                        id='NamaPegawaiFaskes' 
+                                        name='NamaPegawaiFaskes' 
+                                        placeholder="Nama Pegawai Faskes" 
                                         type='text'
                                         onChange={formik.handleChange}
                                         value={formik.values.IDPegawaiFaskes}/>
@@ -93,17 +82,7 @@ const Faskes_Form_Pasien=()=>{
                                         </div>
                                 </div>
                                     {/* pets-birthday */}
-                                <div class='pets-name'>
-                                        <label for='Berat_Badan'>Berat Badan</label>
-                                        <input id='Berat_Badan' 
-                                        name='Berat_Badan' 
-                                        placeholder='XXX' 
-                                        type='text'
-                                        onChange={formik.handleChange}
-                                        value={formik.values.BeratBadan}>
-                                        
-                                        </input>{formik.errors.BeratBadan ? <div>{formik.errors.BeratBadan}</div> : null}
-                                </div>
+
                                 <div class='pets-birthday'>
                                         <label for='Usia'>Usia</label>
                                         <input id='Usia' 
@@ -115,28 +94,10 @@ const Faskes_Form_Pasien=()=>{
                                 </div>
                             </div>
                             <div class='set'>
-                                <div class='pets-gender'>
-                                    <label for='donor-plasma'>Apakah Ingin Mendonorkan Plasma?</label>
-                                    <div class='radio-container'>
-                                        <input  id='donor-plasma-ya' name='kesediaan' type='radio' value='Yes'/>
-                                        <label for='donor-plasma-ya'>Ya</label>
-                                        <input id='donor-plasma-tidak' name='kesediaan' type='radio' value='No'/>
-                                        <label for='donor-plasma-tidak'>Tidak</label>
-                                    </div>
-                                </div>
-                                <div class='pets-name'>
-                                    <label for='Komorbid'> Komorbid </label>
-                                    <input id='Komorbid' 
-                                    name='Komorbid' 
-                                    placeholder="Komorbid" 
-                                    type='text'
-                                    onChange={formik.handleChange}
-                                    value={formik.values.Komorbid}/>
-                                    {formik.errors.Komorbid ? <div>{formik.errors.Komorbid}</div> : null}
-                                </div>
                                 <div class='pets-birthday'>
-                                    <label for='TanggalSembuh'>Tanggal Sembuh</label>
+                                    <label forhtml='TanggalSembuh'>Tanggal Sembuh</label>
                                     <input id='TanggalSembuh' 
+                                    name='TanggalSembuh' 
                                     placeholder='DD/MM/YYYY' 
                                     type='date'
                                     onChange={formik.handleChange}
@@ -184,10 +145,10 @@ const Faskes_Form_Pasien=()=>{
                                 <div class='pets-gender'>
                                             <label for='pet-gender-female'>Rhesus </label>
                                             <div class='radio-container'>
-                                                <input  id='pet-gender-female2' name='pet-gender' type='radio' value='positive'/>
-                                                <label for='pet-gender-female2'>+</label>
-                                                <input id='pet-gender-male2' name='pet-gender' type='radio' value='negative'/>
-                                                <label for='pet-gender-male2'>-</label>
+                                                <input  id='Rhesus' name='pet-gender' type='radio' value='+'/>
+                                                <label for='Rhesus'>+</label>
+                                                <input id='Rhesus' name='pet-gender' type='radio' value='-'/>
+                                                <label for='Rhesus'>-</label>
                                             </div>
                                 </div>
                                 <div class='pets-name'>

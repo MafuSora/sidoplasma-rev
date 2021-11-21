@@ -22,16 +22,10 @@ const Faskes_Form_Permintaan=()=>{
                             </div>
                         </div>
                         <div class='set'>
-                            
-                            <div class='pets-name'>
-                                <label for='pets-name'>Nama Peminta Donor</label>
-                                <input id='pets-name' placeholder="Nama Peminta Donor" type='text'/>
-                            </div>
                             <div class='pets-birthday'>
                                     <label for='pets-birthday'>Tanggal Permintaaan </label>
                                     <input id='pets-birthday' placeholder='DD/MM/YYYY' type='date'></input>
                             </div>
-                            
                         </div>
                         <div class='set'>
                             <div class='pets-gender'>
