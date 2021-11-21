@@ -10,19 +10,14 @@ const Tabel_Faskes_Pasien=(props)=>{
                     <table className="table">
                         <thead>
                             <tr>
-                                <th scope="col">ID Pasien</th>
-                                <th scope="col">Nama Pegawai Faskes</th>
-                                <th scope="col">Nama</th>
-                                <th scope="col">Alamat</th>
+                                <th scope="col">Nama Pasien</th>
                                 <th scope="col">Jenis Kelamin</th>
                                 <th scope="col">Usia</th>
-                                <th scope="col">Berat Badan</th>
-                                <th scope="col">Komorbid</th>
                                 <th scope="col">No Handphone</th>
-                                <th scope="col">Pernah Hamil</th>
-                                <th scope="col">Tanggal Sembuh</th>
                                 <th scope="col">Golongan Darah</th>
                                 <th scope="col">Rhesus</th>
+                                <th scope="col">Tanggal Sembuh</th>
+                                <th scope="col">Nama Pegawai Faskes</th>
                                 <th scope="col">Ingin Donor</th>
                             </tr>
                         </thead>

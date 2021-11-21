@@ -6,7 +6,7 @@ const Faskes_Form_Cabang=()=>{
             <div class='signup-container'>
                 <div class='right-container'>
                 <header>
-                        <h1>Input Data PMI</h1>
+                        <h1>Input Data Fasilitas Kesehatan</h1>
                         <br/>
                         <div class='set'>
                             <div class='pets-name'>

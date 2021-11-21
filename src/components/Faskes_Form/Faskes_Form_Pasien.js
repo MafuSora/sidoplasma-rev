@@ -45,7 +45,7 @@ const Faskes_Form_Pasien=()=>{
             <div className="signup-container">
                 <div class='right-container'>
                     <header className="konten">
-                    <h1>Input Data Fasilitas Kesehatan</h1>
+                    <h1>Input Data Pasien Positif</h1>
                         <br/>
                         <form onSubmit={formik.handleSubmit}>
                             <div class='set'>

@@ -6,10 +6,9 @@ const Tabel_PMI_Cabang=(props)=>{
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">ID Pendonor</th>
-                                <th scope="col">Nama PMI</th>
+                                <th scope="col">Cabang PMI</th>
+                                <th scope="col">No Telephone</th>
                                 <th scope="col">Alamat</th>
-                                <th scope="col">No Telepon</th>
                             </tr>
                         </thead>
                     </table>

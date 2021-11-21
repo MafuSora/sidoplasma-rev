@@ -24,16 +24,15 @@ const validate = values => {
 const PMI_Form_Pendonor=()=>{
     const formik = useFormik({
         initialValues: {
-            IDPasien: '',
-            IDPegawaiFaskes: '',
-            NamaPasien: '',
+            NamaPendonor: '',
             Alamat:'',
-            NoHP: '',
-            TanggalSembuh:'',
+            NoHandphone: '',
+            TanggalDonor:'',
             Usia :'',
-            BeratBadan:'',
+            JenisKelamin:'',
             GolonganDarah:'',
-            Rhesus: ''
+            Rhesus: '',
+            CabangPMI: '',
         },
         validate,
         onSubmit: values => {
@@ -51,27 +50,16 @@ const PMI_Form_Pendonor=()=>{
                             <div class='set'>
                                 
                                 <div class='pets-name'>
-                                    <label htmlfor='NamaPegawaiPMI'>Nama Pegawai PMI</label>
-                                    <input 
-                                        id='NamaPegawaiPMI' 
-                                        name='NamaPegawaiPMI' 
-                                        placeholder="Nama Pegawai PMI" 
-                                        type='text'
-                                        onChange={formik.handleChange}
-                                        value={formik.values.IDPegawaiPMI}/>
-                                        {formik.errors.IDPegawaiPMI ? <div>{formik.errors.IDPegawaiFaskes}</div> : null}
-                                </div>
-                                <div class='pets-name'>
                                     <label htmlfor='NamaPendonor'>Nama Pendonor</label>
                                     <input 
                                         id='NamaPendonor' 
+                                        name='NamaPendonor' 
                                         placeholder="Nama Pendonor" 
                                         type='text'
                                         onChange={formik.handleChange}
-                                        value={formik.values.NamaPendonor}/>
+                                        value={formik.values.IDPendonor}/>
+                                        {formik.errors.IDPendonor ? <div>{formik.errors.IDPendonor}</div> : null}
                                 </div>
-                            </div>
-                            <div class='set'>
                                 <div class='pets-gender'>
                                         <label for='gender'>Jenis Kelamin</label>
                                         <div class='radio-container'>
@@ -81,6 +69,18 @@ const PMI_Form_Pendonor=()=>{
                                             <label for='pet-gender-male'>Male</label>
                                         </div>
                                 </div>
+                                <div class='pets-name'>
+                                    <label htmlfor='NamaPendonor'>Cabang PMI </label>
+                                    <input 
+                                        id='CabangPMI' 
+                                        placeholder="Cabang PMI" 
+                                        type='text'
+                                        onChange={formik.handleChange}
+                                        value={formik.values.CabangPMI}/>
+                                </div>
+                            </div>
+                            <div class='set'>
+                                
                                     {/* pets-birthday */}
 
                                 <div class='pets-birthday'>

@@ -4,7 +4,7 @@ import {useState} from 'react';
 import FormPMIPendonor from '../PMI_Form/PMI_Form_Pendonor';
 import FormPMIPegawai from '../PMI_Form/PMI_Form_Pegawai';
 import FormPMICabang from '../PMI_Form/PMI_Form_Cabang';
-import FormPMIInventori from '../PMI_Form/PMI_Form_Inventori';
+// import FormPMIInventori from '../PMI_Form/PMI_Form_Inventori';
 
 const PMI_Main_Menu=(props)=>{
     const [radioValue, setRadioValue] = useState('1');
@@ -13,7 +13,7 @@ const PMI_Main_Menu=(props)=>{
         { name: 'Pendonor', value: '1'  },
         { name: 'Pegawai PMI', value: '2' },
         { name: 'PMI', value: '3' },
-        { name: 'Inventori Plasma', value: '4' },
+        // { name: 'Inventori Plasma', value: '4' },
     ];
     
     return(
@@ -55,7 +55,7 @@ const PMI_Main_Menu=(props)=>{
                     {name==="1" && <FormPMIPendonor/>}
                     {name==="2" && <FormPMIPegawai/>}
                     {name==="3" && <FormPMICabang/>}
-                    {name==="4" && <FormPMIInventori/>}
+                    {/* {name==="4" && <FormPMIInventori/>} */}
                 </div>
             </div>
         </div>

@@ -7,13 +7,12 @@ const Tabel_PMI_Inventori=(props)=>{
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">ID Permintaan</th>
-                                <th scope="col">ID Pendonor</th>
-                                <th scope="col">ID PMI</th>
                                 <th scope="col">Golongan Darah</th>
                                 <th scope="col">Rhesus</th>
                                 <th scope="col">Tanggal Kadaluarsa</th>
-                                <th scope="col">Status</th>
+                                <th scope="col">Cabang PMI</th>
+                                <th scope="col">No Telephone</th>
+                                <th scope="col">Stok</th>
                             </tr>
                         </thead>
                     </table>

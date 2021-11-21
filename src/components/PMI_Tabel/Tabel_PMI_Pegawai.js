@@ -8,13 +8,10 @@ const Tabel_PMI_Pegawai=(props)=>{
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">ID Pegawai PMI</th>
-                                <th scope="col">ID PMI</th>
-                                <th scope="col">Jenis Kelamin</th>
-                                <th scope="col">Usia</th>
+                                <th scope="col">Nama Pegawai</th>
+                                <th scope="col">Nama PMI</th>
                                 <th scope="col">No Handphone</th>
-                                <th scope="col">Alamat</th>
-                                <th scope="col">Username</th>
-                                <th scope="col">Username</th>
+                    
                             </tr>
                         </thead>
                     </table>

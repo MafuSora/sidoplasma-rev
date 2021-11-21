@@ -35,7 +35,7 @@ function App() {
       <div Classname="App">
         <div className="backg">
           <Router>
-            <Navbar />
+            
             <main>
               <Switch>
 
@@ -45,10 +45,12 @@ function App() {
                 </Route>
 
                 <Route path="/menu2">
+                  <Navbar />
                   <Menu1 />
                 </Route>
 
                 <Route path="/menu1">
+                  <Navbar />
                   <Menu2 />
                 </Route>
 
@@ -57,14 +59,17 @@ function App() {
                 </Route>
 
                 <Route path="/menu4">
+                  <Navbar />
                   <Menu4></Menu4>
                 </Route>
 
                 <Route path="/Tabel1">
+                  <Navbar />
                   <Tabel1></Tabel1>
                 </Route>
 
                 <Route path="/Tabel2">
+                  <Navbar />
                   <Tabel2></Tabel2>
                 </Route>
 

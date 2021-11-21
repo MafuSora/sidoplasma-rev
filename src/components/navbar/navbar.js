@@ -26,7 +26,7 @@ const Navibar = () => {
           
             <Form className="d-flex ">
                 <div class = "button p-2">
-                  <Button variant="outline-danger " className="profile mx-3" >Profile </Button>
+                  <a href="/login"><Button variant="outline-danger " className="profile mx-3" >Profile </Button></a>
                   {/* <Button variant="outline-danger" size = "sm">Sign Up </Button> */}
                 </div>
             </Form>
