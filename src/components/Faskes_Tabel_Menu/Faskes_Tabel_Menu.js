@@ -4,15 +4,15 @@ import {useState} from 'react';
 import TabelFaskesPasien from '../Faskes_Tabel/Tabel_Faskes_Pasien';
 import TabelFaskesPegawai from '../Faskes_Tabel/Tabel_Faskes_Pegawai';
 import TabelFaskesCabang from '../Faskes_Tabel/Tabel_Faskes_Cabang';
-import TabelFaskesPermintaan from '../Faskes_Tabel/Tabel_Faskes_Permintaan';
+// import TabelFaskesPermintaan from '../Faskes_Tabel/Tabel_Faskes_Permintaan';
 const Faskes_Tabel_Menu=(props)=>{
     const [radioValue, setRadioValue] = useState('1');
     const [name,setName]=useState("1")
     const radios = [
-        { name: 'Input Pasien Positif', value: '1'  },
-        { name: 'Pegawai Fasilitas Kesehatan', value: '2' },
-        { name: 'Fasilitas Kesehatan', value: '3' },
-        { name: 'Permintaan Donor Plasma', value: '4' },
+        { name: 'Tabel Pasien Positif', value: '1'  },
+        { name: 'Tabel Pegawai Fasilitas Kesehatan', value: '2' },
+        { name: 'Tabel Fasilitas Kesehatan', value: '3' },
+        // { name: 'Permintaan Donor Plasma', value: '4' },
     ];
     return(
         <div className="containutama" >
@@ -54,7 +54,7 @@ const Faskes_Tabel_Menu=(props)=>{
                     {name==="1" && <TabelFaskesPasien/>}
                     {name==="2" && <TabelFaskesPegawai/>}
                     {name==="3" && <TabelFaskesCabang/>}
-                    {name==="4" && <TabelFaskesPermintaan/>}
+                    {/* {name==="4" && <TabelFaskesPermintaan/>} */}
                 </div>
             </div>
         </div>

@@ -8,10 +8,10 @@ const Tabel_Faskes_Cabang=(props)=>{
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">ID Faskes</th>
-                                <th scope="col">Nama Faskes</th>
+                                <th scope="col">Nama Instansi</th>
                                 <th scope="col">Jenis Faskes</th>
                                 <th scope="col">Alamat</th>
-                                <th scope="col">No Handphone</th>
+                                <th scope="col">No Telephone</th>
                             </tr>
                         </thead>
                     </table>

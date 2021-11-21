@@ -8,10 +8,9 @@ const Tabel_Faskes_Pegawai=(props)=>{
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">ID Pegawai Faskes</th>
-                                <th scope="col">ID Faskes</th>
+                                <th scope="col">Nama Faskes</th>
                                 <th scope="col">Nama</th>
                                 <th scope="col">Jenis Kelamin</th>
-                                <th scope="col">Usia</th>
                                 <th scope="col">No.Handphone</th>
                                 <th scope="col">Alamat</th>
                                 <th scope="col">Username</th>

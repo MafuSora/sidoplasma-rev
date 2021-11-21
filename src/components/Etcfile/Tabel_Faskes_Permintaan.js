@@ -7,12 +7,10 @@ const Tabel_Faskes_Permintaan=(props)=>{
                 <table className="table">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">ID Data Permintaan Donor</th>
-                                <th scope="col">ID Pegawai Faskes</th>
-                                <th scope="col">Nama Permintaan</th>
+                                <th scope="col">Nama Faskes</th>
                                 <th scope="col">Golongan Darah</th>
                                 <th scope="col">Rhesus</th>
+                                <th scope="col">Jumlah</th>
                             </tr>
                         </thead>
                     </table>
