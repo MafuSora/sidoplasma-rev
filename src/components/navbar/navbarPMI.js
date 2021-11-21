@@ -18,9 +18,9 @@ const Navibar = () => {
           <Nav className="me-auto p-4 ">
             <Nav.Link href="/" className = "textnavbar" activeClassName="activetextnavbar" exact={true}>About us</Nav.Link>
             <Nav.Link href="/FormPMI" className = "textnavbar" >PMI Input</Nav.Link>
-            <Nav.Link href="/FormFaskes" className = "textnavbar">Faskes Input</Nav.Link>
+            {/* <Nav.Link href="/FormFaskes" className = "textnavbar">Faskes Input</Nav.Link> */}
             <Nav.Link href="/TabelPMI" className = "textnavbar">Data PMI</Nav.Link>
-            <Nav.Link href="/TabelFaskes" className = "textnavbar">Data Faskes</Nav.Link>
+            {/* <Nav.Link href="/TabelFaskes" className = "textnavbar">Data Faskes</Nav.Link> */}
             {/* <Nav.Link href="/Login" className = "textnavbar">Login</Nav.Link> */}
           </Nav>
           

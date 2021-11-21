@@ -35,37 +35,37 @@ const Faskes_Konten_1=()=>{
                                 <Card className="card" >
                                     <Card.Img variant="top" src={card1} className ="kartu" />
                                     <Card.Body>
-                                    <Card.Title>Kontak Kami!</Card.Title>
+                                    <Card.Title className="judulkartu">Kontak Kami!</Card.Title>
                                     <Card.Text className="tulisankartu">
                                         Kontak kami melalui email sidoplasmateam@gmail.com dengan menyerahkan beberapa dokumen yang membuktikan bahwa anda berasal dari fasilitas kesehatan yang telah diakui oleh pemerintah
                                     </Card.Text>
                                     </Card.Body>
                                     <Card.Footer>
-                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                    <small className="text-muted">dokumen a hingga b</small>
                                     </Card.Footer>
                                 </Card>
                                 <Card>
                                     <Card.Img variant="top" src={card2} className ="kartu"  />
                                     <Card.Body>
-                                    <Card.Title>Verifikasi dan Validasi</Card.Title>
+                                    <Card.Title className="judulkartu">Verifikasi dan Validasi</Card.Title>
                                     <Card.Text className="tulisankartu">
-                                        Dokumen yang telah dikirimkan akan kami verifikasi dan validasi, bila sudah terverifikasi akan kami kirimkan email yang berisikan username dan password{' '}
+                                        Dokumen yang telah dikirimkan akan kami verifikasi dan validasi, bila sudah terverifikasi admin akan mengaktifkan akun{' '}
                                     </Card.Text>
                                     </Card.Body>
                                     <Card.Footer>
-                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                    <small className="text-muted"></small>
                                     </Card.Footer>
                                 </Card>
                                 <Card>
                                     <Card.Img variant="top" src={card3} className ="kartu" />
                                     <Card.Body>
-                                    <Card.Title>Pemberian Akun Sidoplasma</Card.Title>
+                                    <Card.Title className="judulkartu">Pemberian Akun Sidoplasma</Card.Title>
                                     <Card.Text className="tulisankartu">
-                                        Setelah terverifikasi maka admin akan memberikan akun sidoplasma yang berisikan username dan password agar user dapat mengakses sidoplasma
+                                        Setelah terverifikasi maka admin akan memberikan akun sidoplasma yang berisikan username dan password agar user dapat mengakses website sidoplasma
                                     </Card.Text>
                                     </Card.Body>
                                     <Card.Footer>
-                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                    <small className="text-muted"></small>
                                     </Card.Footer>
                                 </Card>
                         </CardGroup>

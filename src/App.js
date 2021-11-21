@@ -4,12 +4,12 @@ import Footer from './components/footer/footer';
 import React from 'react';
 import Login from './components/login/login';
 import Navbar from './components/navbar/navbar';
-import Menu1 from './components/PMI/PMI_Main_Menu';
-import Menu2 from './components/Faskes/Faskes_Main_Menu';
-import Menu4 from './components/About_Us/about';
-import Tabel1 from './components/PMI_Tabel_Menu/PMI_Menu_Tabel';
-import Tabel2 from './components/Faskes_Tabel_Menu/Faskes_Tabel_Menu';
-
+import FormPMI from './components/PMI/PMI_Main_Menu';
+import FormFaskes from './components/Faskes/Faskes_Main_Menu';
+import AboutUs from './components/About_Us/about';
+import TabelPMI from './components/PMI_Tabel_Menu/PMI_Menu_Tabel';
+import TabelFaskes from './components/Faskes_Tabel_Menu/Faskes_Tabel_Menu';
+import Navbarguest from './components/navbar/navbarguest';
 import {
   BrowserRouter as Router,
   Route,
@@ -40,37 +40,33 @@ function App() {
               <Switch>
 
                 <Route path="/" exact>
-                  <Login />
+                  <Navbarguest/>
+                  <AboutUs />
                   {/* <Gerbong/> */}
                 </Route>
 
-                <Route path="/menu2">
+                <Route path="/FormPMI">
                   <Navbar />
-                  <Menu1 />
+                  <FormPMI />
                 </Route>
 
-                <Route path="/menu1">
+                <Route path="/FormFaskes">
                   <Navbar />
-                  <Menu2 />
+                  <FormFaskes />
                 </Route>
 
-                <Route path="/menu3">
-                  {/* <Menu3></Menu3> */}
+                <Route path="/TabelPMI">
+                  <Navbar/>
+                  <TabelPMI></TabelPMI>
                 </Route>
 
-                <Route path="/menu4">
+                <Route path="/TabelFaskes">
                   <Navbar />
-                  <Menu4></Menu4>
+                  <TabelFaskes></TabelFaskes>
                 </Route>
 
-                <Route path="/Tabel1">
-                  <Navbar />
-                  <Tabel1></Tabel1>
-                </Route>
-
-                <Route path="/Tabel2">
-                  <Navbar />
-                  <Tabel2></Tabel2>
+                <Route path="/Login">
+                  <Login></Login>
                 </Route>
 
                 <Redirect to="/"/>
