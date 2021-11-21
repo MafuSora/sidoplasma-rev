@@ -26,9 +26,6 @@ const PMI_Form_Pegawai=()=>{
                                 <label for='pets-birthday'>No. Handphone</label>
                                 <input id='pets-birthday' placeholder='+62' type='text'></input>
                         </div>
-                    </div>
-                    <div class='set'>
-                        
                         <div class='pets-birthday'>
                             <label for='pets-birthday'>Username</label>
                             <input id='pets-birthday' placeholder='Username' type='text'></input>
@@ -37,6 +34,10 @@ const PMI_Form_Pegawai=()=>{
                             <label for='pets-birthday'>Password</label>
                             <input id='pets-birthday' placeholder='Password' type='password'></input>
                         </div>
+                    </div>
+                    <div class='set'>
+                        
+                        
                     </div>
                 </header>
                 <footer>

@@ -69,20 +69,6 @@ const PMI_Form_Pendonor=()=>{
                                             <label for='pet-gender-male'>Male</label>
                                         </div>
                                 </div>
-                                <div class='pets-name'>
-                                    <label htmlfor='NamaPendonor'>Cabang PMI </label>
-                                    <input 
-                                        id='CabangPMI' 
-                                        placeholder="Cabang PMI" 
-                                        type='text'
-                                        onChange={formik.handleChange}
-                                        value={formik.values.CabangPMI}/>
-                                </div>
-                            </div>
-                            <div class='set'>
-                                
-                                    {/* pets-birthday */}
-
                                 <div class='pets-birthday'>
                                         <label for='Usia'>Usia</label>
                                         <input id='Usia' 
@@ -92,8 +78,29 @@ const PMI_Form_Pendonor=()=>{
                                         onChange={formik.handleChange}
                                         value={formik.values.Usia}></input>{formik.errors.Usia ? <div>{formik.errors.Usia}</div> : null}
                                 </div>
+                                
                             </div>
                             <div class='set'>
+                                <div class='pets-name'>
+                                    <label for='NoHP'>Nomor Handphone</label>
+                                    <input 
+                                    id='NoHP' 
+                                    name= "NoHP"
+                                    type='text'
+                                    onChange={formik.handleChange}
+                                    value={formik.values.NoHP}
+                                    placeholder='+62XXXXXXX'/>
+                                </div>
+                                <div class='pets-name'>
+                                    <label for='Alamat'>Alamat</label>
+                                    <input 
+                                    id='Alamat' 
+                                    name= "Alamat"
+                                    type='text'
+                                    onChange={formik.handleChange}
+                                    value={formik.values.Alamat}
+                                    placeholder='Alamat'/>
+                                </div>
                                 <div class='pets-birthday'>
                                     <label forhtml='TanggalDonor'>Tanggal Donor</label>
                                     <input id='TanggalDonor' 
@@ -105,16 +112,15 @@ const PMI_Form_Pendonor=()=>{
                                     ></input>
                                 </div>
                             </div>
-                            <div className="set">
+                            <div class='set'>
                                 <div class='pets-name'>
-                                    <label for='Alamat'>Alamat</label>
+                                    <label htmlfor='NamaPendonor'>Cabang PMI </label>
                                     <input 
-                                    id='Alamat' 
-                                    name= "Alamat"
-                                    type='text'
-                                    onChange={formik.handleChange}
-                                    value={formik.values.Alamat}
-                                    placeholder='Alamat'/>
+                                        id='CabangPMI' 
+                                        placeholder="Cabang PMI" 
+                                        type='text'
+                                        onChange={formik.handleChange}
+                                        value={formik.values.CabangPMI}/>
                                 </div>
                                 <div class='pets-name'>
                                     <label for='Alamat'>Golongan Darah</label>
@@ -128,20 +134,12 @@ const PMI_Form_Pendonor=()=>{
                                             <input id='goldar-O' name='kesediaan' type='radio' value='O'/>
                                             <label for='goldar-O'>O</label>
                                         </div>
-                                        
                                 </div>
                             </div>
+                            <div className="set">
+                            </div>
                             <div className='set'>
-                                <div class='pets-name'>
-                                    <label for='NoHP'>Nomor Handphone</label>
-                                    <input 
-                                    id='NoHP' 
-                                    name= "NoHP"
-                                    type='text'
-                                    onChange={formik.handleChange}
-                                    value={formik.values.NoHP}
-                                    placeholder='+62XXXXXXX'/>
-                                </div>
+                                
                                 <div class='pets-gender'>
                                             <label for='pet-gender-female'>Rhesus </label>
                                             <div class='radio-container'>

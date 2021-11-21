@@ -12,16 +12,17 @@ const Faskes_Form_Pegawai=()=>{
                                 <label for='pets-name'>ID Pegawai</label>
                                 <input id='pets-name' placeholder="ID Pegawai PMI" type='text'/>
                             </div>
+                            <div class='pets-name'>
+                                <label for='pets-name'>Nama Pegawai Faskes</label>
+                                <input id='pets-name' placeholder="Nama Pegawai Faskes" type='text'/>
+                            </div>
                             <div class='pets-breed'>
                                 <label for='pets-breed'>Nama Cabang Faskes</label>
                                 <input id='pets-breed' placeholder="Nama Cabang Faskes" type='text'/>
                             </div>
                         </div>
                         <div class='set'>
-                            <div class='pets-name'>
-                                <label for='pets-name'>Nama Pegawai Faskes</label>
-                                <input id='pets-name' placeholder="Nama Pegawai Faskes" type='text'/>
-                            </div>
+                            
                         </div>
                         <div class='set'>
                             <div class='pets-birthday'>
