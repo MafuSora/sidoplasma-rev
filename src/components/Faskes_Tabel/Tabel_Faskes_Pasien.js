@@ -8,6 +8,7 @@ const Tabel_Faskes_Pasien = (props) => {
   const header = { 'X-Parse-Application-Id': 'MyAPPID' };
 
   const [pasien, setPasien] = useState([]);
+  const [radioVal, setRadioVal] = useState('');
 
   useEffect(() => {
     fetch(url, {
@@ -57,6 +58,36 @@ const Tabel_Faskes_Pasien = (props) => {
           </tbody>
           <tr></tr>
         </table>
+        {/* CONTOH RADIO */}
+        <div
+          class="form-check"
+          //   style={{ display: 'flex', flexDirection: 'column' }}
+        >
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            value="hafiz"
+            onChange={(e) => setRadioVal(e.target.value)}
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Hafizh
+          </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            value="nisa"
+            onChange={(e) => setRadioVal(e.target.value)}
+          />
+          <label
+            class="form-check-label"
+            for="flexRadioDefault1"
+            onClick={console.log(radioVal)}
+          >
+            Nisa
+          </label>
+        </div>
       </div>
     </div>
   );
