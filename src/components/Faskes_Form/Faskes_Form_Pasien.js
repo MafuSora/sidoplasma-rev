@@ -156,15 +156,13 @@ const Faskes_Form_Pasien=()=>{
                                 <div class='pets-gender'>
                                             <label for='pet-gender-female'>Rhesus </label>
                                             <div class='radio-container'>
-                                                <input  id='Rhesus' name='pet-gender' type='radio' value='+'/>
-                                                <label for='Rhesus'>+</label>
-                                                <input id='Rhesus' name='pet-gender' type='radio' value='-'/>
-                                                <label for='Rhesus'>-</label>
+                                                <input  id='RhesusPositif' name='pet-gender' type='radio' value='+'/>
+                                                <label for='RhesusPositif'>+</label>
+                                                <input id='RhesusNegatif' name='pet-gender' type='radio' value='-'/>
+                                                <label for='RhesusNegatif'>-</label>
                                             </div>
                                 </div>
-                                <div class='pets-name'>
-                                    <button className='btn-outline-danger bt-sm  px-4 py-1 mt-4'>Submit</button>
-                                </div>
+                               
                             </div>
                             <div className="set">
                                 
@@ -181,6 +179,9 @@ const Faskes_Form_Pasien=()=>{
                                             <label for='goldar-O'>O</label>
                                         </div>
                                         
+                                </div>
+                                <div class='pets-name'>
+                                    <button className='btn-outline-danger bt-sm  px-4 py-1 mt-4'>Submit</button>
                                 </div>
                             </div>
                             
