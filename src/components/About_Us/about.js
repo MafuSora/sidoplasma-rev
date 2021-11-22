@@ -36,12 +36,13 @@ const Faskes_Konten_1=()=>{
                                     <Card.Img variant="top" src={card1} className ="kartu" />
                                     <Card.Body>
                                     <Card.Title className="judulkartu">Kontak Kami!</Card.Title>
-                                    <Card.Text className="tulisankartu">
-                                        Kontak kami melalui email sidoplasmateam@gmail.com dengan menyerahkan beberapa dokumen yang membuktikan bahwa anda berasal dari fasilitas kesehatan yang telah diakui oleh pemerintah
+                                    <Card.Text className="tulisankartu ">
+                                        Kontak kami melalui email <a href="mailto:sidoplasma@gmail.com?
+										&subject=Contact Us For Register">sidoplasmateam@gmail.com</a> dengan menyerahkan beberapa dokumen yang membuktikan bahwa anda berasal dari fasilitas kesehatan yang telah diakui oleh pemerintah
                                     </Card.Text>
                                     </Card.Body>
                                     <Card.Footer>
-                                    <small className="text-muted">dokumen a hingga b</small>
+                                    <small className="text-muted">  </small>
                                     </Card.Footer>
                                 </Card>
                                 <Card>
