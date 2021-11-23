@@ -11,7 +11,11 @@ const Faskes_Form_Cabang=()=>{
                         <div class='set'>
                             <div class='pets-name'>
                                 <label for='IDFaskes'>ID Fasilitas Kesehatan</label>
-                                <input id='IDFaskes' placeholder="ID Fasilitas Kesehatan" type='text'/>
+                                <input 
+                                id='IDFaskes' 
+                                placeholder="ID Fasilitas Kesehatan" 
+                                type='text'
+                                />
                             </div>
                             <div class='pets-weight'>
                                 <label for='NamaFaskes'>Nama Fasilitas Kesehatan</label>

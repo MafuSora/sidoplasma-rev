@@ -1,4 +1,5 @@
 import './Faskes_Form.css'
+import {useState}from 'react';
 import { useFormik} from 'formik';
 const validate = values => {
     const errors = {};
@@ -52,6 +53,9 @@ const validate = values => {
     return errors;
 };
 const Faskes_Form_Pasien=()=>{
+    const [radioValRhesus, setRadioValRhesus] = useState('');
+    const [radioValGender, setRadioValGender] = useState('');
+    const [radioValGoldar, setRadioValGoldar] = useState('');
     const formik = useFormik({
         initialValues: {
             NamaPegawaiFaskes: '',
@@ -61,13 +65,15 @@ const Faskes_Form_Pasien=()=>{
             TanggalSembuh:'',
             Usia :'',
             GolonganDarah:'',
-            Rhesus: ''
+            Rhesus: '',
+            JenisKelamin:"",
         },
         validate,
         onSubmit: values => {
             alert(JSON.stringify(values, null, 2));
         },
         });
+       
     return(
         <div className="containutama" >
             <div className="signup-container">
@@ -113,9 +119,9 @@ const Faskes_Form_Pasien=()=>{
                                 <div class='pets-gender'>
                                         <label for='gender'>Jenis Kelamin</label>
                                         <div class='radio-container'>
-                                            <input  id='pet-gender-female' name='pet-gender' type='radio' value='female'/>
+                                            <input  id='pet-gender-female' name='pet-gender' type='radio' value='female' onChange={(e) => setRadioValGender(e.target.value)}/>
                                             <label for='pet-gender-female'>Female</label>
-                                            <input id='pet-gender-male' name='pet-gender' type='radio' value='male'/>
+                                            <input id='pet-gender-male' name='pet-gender' type='radio' value='male'onChange={(e) => setRadioValGender(e.target.value)}/>
                                             <label for='pet-gender-male'>Male</label>
                                         </div>
                                 </div>
@@ -156,26 +162,24 @@ const Faskes_Form_Pasien=()=>{
                                 <div class='pets-gender'>
                                             <label for='pet-gender-female'>Rhesus </label>
                                             <div class='radio-container'>
-                                                <input  id='RhesusPositif' name='pet-gender' type='radio' value='+'/>
+                                                <input  id='RhesusPositif' name='pet-gender' type='radio' value='+' onChange={(e) => setRadioValRhesus(e.target.value)}/>
                                                 <label for='RhesusPositif'>+</label>
-                                                <input id='RhesusNegatif' name='pet-gender' type='radio' value='-'/>
+                                                <input id='RhesusNegatif' name='pet-gender' type='radio' value='-' onChange={(e) => setRadioValRhesus(e.target.value)} />
                                                 <label for='RhesusNegatif'>-</label>
                                             </div>
                                 </div>
-                               
                             </div>
                             <div className="set">
-                                
                                 <div class='pets-name'>
                                     <label for='Alamat'>Golongan Darah</label>
                                         <div class='radio-container'>
-                                            <input  id='goldar-A' name='kesediaan' type='radio' value='A'/>
+                                            <input  id='goldar-A' name='kesediaan' type='radio' value='A' onChange={(e) => setRadioValGoldar(e.target.value)}/>
                                             <label for='goldar-A'>A</label>
-                                            <input id='goldar-B' name='kesediaan' type='radio' value='B'/>
+                                            <input id='goldar-B' name='kesediaan' type='radio' value='B' onChange={(e) => setRadioValGoldar(e.target.value)}/>
                                             <label for='goldar-B'>B</label>
-                                            <input id='goldar-AB' name='kesediaan' type='radio' value='AB'/>
+                                            <input id='goldar-AB' name='kesediaan' type='radio' value='AB' onChange={(e) => setRadioValGoldar(e.target.value)}/>
                                             <label for='goldar-AB'>AB</label>
-                                            <input id='goldar-O' name='kesediaan' type='radio' value='O'/>
+                                            <input id='goldar-O' name='kesediaan' type='radio' value='O'  onChange={(e) => setRadioValGoldar(e.target.value)} />
                                             <label for='goldar-O'>O</label>
                                         </div>
                                         
