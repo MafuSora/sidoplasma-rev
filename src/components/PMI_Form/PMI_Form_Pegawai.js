@@ -1,4 +1,69 @@
 import './PMI_Form.css'
+import { useFormik} from 'formik';
+const validate = values => {
+    const errors = {};
+    if (!values.ID_Pegawai) {
+        errors.ID_Pegawai = 'Required';
+    } else if (values.ID_Pegawai.length > 115) {
+        errors.ID_Pegawai = 'Maksimal 115 Karakter';
+    }
+
+    if (!values.Nama_PMI) {
+        errors.Nama_PMI = 'Required';
+    } else if (values.Nama_PMI.length > 115) {
+        errors.Nama_PMI = 'Maksimal 115 Karakter';
+    }
+
+    if (!values.nama_pegawai) {
+        errors.nama_pegawai = 'Required';
+    } else if (values.nama_pegawai.length > 115) {
+        errors.nama_pegawai = 'Maksimal 115 Karakter';
+    }
+
+    if (!values.NoHP) {
+        errors.NoHP = 'Required';
+    } else if (values.NoHP.length > 14) {
+        errors.NoHP = 'Maksimal 14 Karakter';
+    }
+
+    if (!values.Username) {
+        errors.Username = 'Required';
+    } else if (values.Username.length > 115) {
+        errors.Username = 'Maksimal 115 Karakter';
+    }
+
+    if (!values.Password) {
+        errors.Password = 'Required';
+    } else if (values.Password.length > 115) {
+        errors.Password = 'Maksimal 115 Karakter';
+    }
+
+
+    if (!values.email) {
+        errors.email = 'Required';
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+        errors.email = 'Invalid email address';
+    }
+    return errors;
+};
+const PMI_Form_Pendonor=()=>{
+    const formik = useFormik({
+        initialValues: {
+            NamaPendonor: '',
+            Alamat:'',
+            NoHandphone: '',
+            TanggalDonor:'',
+            Usia :'',
+            JenisKelamin:'',
+            GolonganDarah:'',
+            Rhesus: '',
+            CabangPMI: '',
+        },
+        validate,
+        onSubmit: values => {
+            alert(JSON.stringify(values, null, 2));
+        },
+        });
 const PMI_Form_Pegawai=()=>{
     return(
         <div className="containutama" >
@@ -10,29 +75,63 @@ const PMI_Form_Pegawai=()=>{
                     <div class='set'>
                         <div class='pets-name'>
                             <label for='pets-name'>ID Pegawai PMI</label>
-                            <input id='pets-name' placeholder="ID Pegawai PMI" type='text'/>
+                            <input 
+                                        id='ID_Pegawai' 
+                                        name='ID_Pegawai' 
+                                        placeholder="ID Pegawai PMI" 
+                                        type='text'
+                                        onChange={formik.handleChange}
+                                        value={formik.values.ID_Pegawai}/>
+                                        {formik.errors.ID_Pegawai ? <div>{formik.errors.ID_Pegawai}</div> : null}
                         </div>
                         <div class='pets-breed'>
                             <label for='pets-breed'>Nama PMI</label>
-                            <input id='pets-breed' placeholder="ID PMI" type='text'/>
+                            <input id='Nama_PMI' 
+                                        name='Nama_PMI' 
+                                        placeholder='Nama_PMI'
+                                        type='text'
+                                        onChange={formik.handleChange}
+                                        value={formik.values.Nama_PMI}></input>{formik.errors.Nama_PMI ? <div>{formik.errors.Nama_PMI}</div> : null}
                         </div>
                         <div class='pets-name'>
                             <label for='pets-name'>Nama Pegawai</label>
-                            <input id='pets-name' placeholder="Nama Pegawai" type='text'/>
+                            <input 
+                                    id='nama_pegawai' 
+                                    name= "nama_pegawai"
+                                    type='text'
+                                    onChange={formik.handleChange}
+                                    value={formik.values.nama_pegawai}
+                                    placeholder='Nama Pegawai'/>
                         </div>    
                     </div>
                     <div class='set'>
                         <div class='pets-birthday'>
                                 <label for='pets-birthday'>No. Handphone</label>
-                                <input id='pets-birthday' placeholder='+62' type='text'></input>
+                                <input 
+                                    id='NoHP' 
+                                    name= "NoHP"
+                                    type='text'
+                                    onChange={formik.handleChange}
+                                    value={formik.values.NoHP}
+                                    placeholder='+62XXXXXXX'/>
                         </div>
                         <div class='pets-birthday'>
                             <label for='pets-birthday'>Username</label>
-                            <input id='pets-birthday' placeholder='Username' type='text'></input>
+                            <input id='Username' 
+                                        name='Username' 
+                                        placeholder='Username'
+                                        type='text'
+                                        onChange={formik.handleChange}
+                                        value={formik.values.Username}></input>{formik.errors.Username ? <div>{formik.errors.Username}</div> : null}
                         </div>
                         <div class='pets-birthday'>
                             <label for='pets-birthday'>Password</label>
-                            <input id='pets-birthday' placeholder='Password' type='password'></input>
+                            <input id='Password' 
+                                        name='Password' 
+                                        placeholder='Password'
+                                        type='text'
+                                        onChange={formik.handleChange}
+                                        value={formik.values.Password}></input>{formik.errors.Password ? <div>{formik.errors.Password}</div> : null}
                         </div>
                     </div>
                     <div class='set'>
@@ -52,4 +151,4 @@ const PMI_Form_Pegawai=()=>{
     
     );
 }
-export default PMI_Form_Pegawai
+export default PMI_Form_Pegawai}
