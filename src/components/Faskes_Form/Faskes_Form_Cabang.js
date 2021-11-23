@@ -1,6 +1,55 @@
 import './Faskes_Form.css'
+import { useFormik} from 'formik';
+const validate = values => {
+    const errors = {};
+    if (!values.IDFaskes) {
+        errors.IDFaskes = 'Required';
+    } else if (values.IDFaskes.length > 20) {
+        errors.IDFaskes = 'Maksimal 20 Karakter';
+    }
 
+    if (!values.Nama_Faskes) {
+        errors.Nama_Faskes = 'Required';
+    } else if (values.Nama_Faskes.length > 115) {
+        errors.Nama_Faskes = 'Maksimal 115 Karakter';
+    }
+
+    if (!values.Alamat) {
+        errors.Alamat = 'Required';
+    } else if (values.Alamat.length > 115) {
+        errors.Alamat = 'Maksimal 115 Karakter';
+    }
+
+    if (!values.NoHP) {
+        errors.NoHP = 'Required';
+    } else if (values.NoHP.length > 14) {
+        errors.NoHP = 'Maksimal 14 Karakter';
+    }
+
+    if (!values.Jenis_faskes) {
+        errors.Jenis_faskes = 'Required';
+    } else if (values.Jenis_faskes.length > 115) {
+        errors.Jenis_faskes = 'Maksimal 115 Karakter';
+    }
+    return errors;
+};
 const Faskes_Form_Cabang=()=>{
+    const formik = useFormik({
+        initialValues: {
+            NamaPegawaiFaskes: '',
+            Nama_Pasien: '',
+            Alamat:'',
+            NoHP: '',
+            TanggalSembuh:'',
+            Usia :'',
+            GolonganDarah:'',
+            Rhesus: ''
+        },
+        validate,
+        onSubmit: values => {
+            alert(JSON.stringify(values, null, 2));
+        },
+        });
     return(
         <div className="containutama" >
             <div class='signup-container'>
@@ -12,29 +61,57 @@ const Faskes_Form_Cabang=()=>{
                             <div class='pets-name'>
                                 <label for='IDFaskes'>ID Fasilitas Kesehatan</label>
                                 <input 
-                                id='IDFaskes' 
-                                placeholder="ID Fasilitas Kesehatan" 
-                                type='text'
-                                />
+                                        id='IDFaskes' 
+                                        placeholder="ID Faskes" 
+                                        type='text'
+                                        onChange={formik.handleChange}
+                                        value={formik.values.IDFaskes}/>
+                                        {formik.errors.IDFaskes ? <div>{formik.errors.IDFaskes}</div> : null}
                             </div>
                             <div class='pets-weight'>
-                                <label for='NamaFaskes'>Nama Fasilitas Kesehatan</label>
-                                <input className="NamaFaskes"  type='text'  placeholder='Nama Fasilitas Kesehatan'/>
+                                <label for='pet-weight-0-25'>Nama Fasilitas Kesehatan</label>
+                                <input 
+                                        id='Nama_Faskes' 
+                                        placeholder="Nama Fasilitas Kesehatan" 
+                                        type='text'
+                                        onChange={formik.handleChange}
+                                        value={formik.values.Nama_Faskes}/>
+                                        {formik.errors.Nama_Faskes ? <div>{formik.errors.Nama_Faskes}</div> : null}
                             </div>
                         </div>
                         
                         <div class='set'>
                             <div class='pets-name'>
                                 <label for='pets-name'>Jenis Fasilitas Kesehatan</label>
-                                <input id='pets-name' placeholder="Jenis Fasilitas Kesehatan" type='text'/>
+                                <input 
+                                        id='Jenis_faskes' 
+                                        placeholder="Jenis Fasilitas Kesehatan" 
+                                        type='text'
+                                        onChange={formik.handleChange}
+                                        value={formik.values.Jenis_faskes}/>
+                                        {formik.errors.Jenis_faskes ? <div>{formik.errors.Jenis_faskes}</div> : null}
                             </div>    
                             <div class='pets-birthday'>
                                     <label for='pets-birthday'>No. Telephone</label>
-                                    <input id='pets-birthday' placeholder='(0341) XXXXXX' type='text'></input>
+                                    <input 
+                                    id='NoHP' 
+                                    name= "No Telephone"
+                                    type='text'
+                                    onChange={formik.handleChange}
+                                    value={formik.values.NoHP}
+                                    placeholder='+62XXXXXXX'/>
+                                    {formik.errors.NoHP ? <div>{formik.errors.NoHP}</div> : null}
                             </div>
                             <div class='pets-weight'>
                                 <label for='pet-weight-0-25'>Alamat</label>
-                                <input className="alamat"  type='text'  placeholder='Alamat'/>
+                                <label for='Alamat'>Alamat</label>
+                                    <input 
+                                    id='Alamat' 
+                                    placeholder="Alamat" 
+                                    type='text'
+                                    onChange={formik.handleChange}
+                                    value={formik.values.Alamat}/>
+                                    {formik.errors.Alamat ? <div>{formik.errors.Alamat}</div> : null}
                         </div>
                         </div>
                             {/* <div class='radio-container'>
