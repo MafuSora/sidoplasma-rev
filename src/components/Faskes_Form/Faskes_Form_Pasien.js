@@ -119,9 +119,9 @@ const Faskes_Form_Pasien=()=>{
                                 <div class='pets-gender'>
                                         <label for='gender'>Jenis Kelamin</label>
                                         <div class='radio-container'>
-                                            <input  id='pet-gender-female' name='pet-gender' type='radio' value='female' onChange={(e) => setRadioValGender(e.target.value)}/>
+                                            <input  id='pet-gender-female' name='JenisKelamin' type='radio' value='Perempuan' onChange={(e) => formik.JenisKelamin=(e.target.value)}/>
                                             <label for='pet-gender-female'>Female</label>
-                                            <input id='pet-gender-male' name='pet-gender' type='radio' value='male'onChange={(e) => setRadioValGender(e.target.value)}/>
+                                            <input id='pet-gender-male' name='JenisKelamin' type='radio' value='Laki Laki' onChange={(e) => formik.JenisKelamin=(e.target.value)}/>
                                             <label for='pet-gender-male'>Male</label>
                                         </div>
                                 </div>
@@ -162,9 +162,9 @@ const Faskes_Form_Pasien=()=>{
                                 <div class='pets-gender'>
                                             <label for='pet-gender-female'>Rhesus </label>
                                             <div class='radio-container'>
-                                                <input  id='RhesusPositif' name='pet-gender' type='radio' value='+' onChange={(e) => setRadioValRhesus(e.target.value)}/>
+                                                <input  id='RhesusPositif' name='pet-gender' type='radio' value='+' onChange={(e) => formik.Rhesus=(e.target.value)}/>
                                                 <label for='RhesusPositif'>+</label>
-                                                <input id='RhesusNegatif' name='pet-gender' type='radio' value='-' onChange={(e) => setRadioValRhesus(e.target.value)} />
+                                                <input id='RhesusNegatif' name='pet-gender' type='radio' value='-' onChange={(e) => formik.Rhesus=(e.target.value)} />
                                                 <label for='RhesusNegatif'>-</label>
                                             </div>
                                 </div>
@@ -173,13 +173,13 @@ const Faskes_Form_Pasien=()=>{
                                 <div class='pets-name'>
                                     <label for='Alamat'>Golongan Darah</label>
                                         <div class='radio-container'>
-                                            <input  id='goldar-A' name='kesediaan' type='radio' value='A' onChange={(e) => setRadioValGoldar(e.target.value)}/>
+                                            <input  id='goldar-A' name='GolonganDarah' type='radio' value='A' onChange={(e) => formik.GolonganDarah=(e.target.value)}/>
                                             <label for='goldar-A'>A</label>
-                                            <input id='goldar-B' name='kesediaan' type='radio' value='B' onChange={(e) => setRadioValGoldar(e.target.value)}/>
+                                            <input id='goldar-B' name='GolonganDarah' type='radio' value='B' onChange={(e) => formik.GolonganDarah=(e.target.value)}/>
                                             <label for='goldar-B'>B</label>
-                                            <input id='goldar-AB' name='kesediaan' type='radio' value='AB' onChange={(e) => setRadioValGoldar(e.target.value)}/>
+                                            <input id='goldar-AB' name='GolonganDarah' type='radio' value='AB' onChange={(e) => formik.GolonganDarah=(e.target.value)}/>
                                             <label for='goldar-AB'>AB</label>
-                                            <input id='goldar-O' name='kesediaan' type='radio' value='O'  onChange={(e) => setRadioValGoldar(e.target.value)} />
+                                            <input id='goldar-O' name='GolonganDarah' type='radio' value='O'  onChange={(e) => formik.GolonganDarah=(e.target.value)} />
                                             <label for='goldar-O'>O</label>
                                         </div>
                                         

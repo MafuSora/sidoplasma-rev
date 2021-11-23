@@ -29,8 +29,8 @@ const validate = values => {
 
     if (!values.Username) {
         errors.Username = 'Required';
-    } else if (values.TanggalSembuh.length > 115) {
-        errors.TanggalSembuh = 'Maksimal 115 Karakter';
+    } else if (values.Username.length > 115) {
+        errors.Username = 'Maksimal 115 Karakter';
     }
 
     if (!values.TanggalSembuh) {
@@ -61,7 +61,6 @@ const Faskes_Form_Pegawai=()=>{
             NoHP: '',
             Username:'',
             Password :''
-           
         },
         validate,
         onSubmit: values => {
@@ -79,7 +78,7 @@ const Faskes_Form_Pegawai=()=>{
                         <div class='set'>
                             <div class='pets-name'>
                                 <label for='IDPegawai'>ID Pegawai</label>
-                                <input id='IDPegawaiFaskes' name='IDPegawaiFaskes'  placeholder="ID Pegawai PMI" type='text' onChange={formik.handleChange}
+                                <input id='IDPegawaiFaskes' name='IDPegawaiFaskes'  placeholder="ID Pegawai Fasilitas Kesehatan" type='text' onChange={formik.handleChange}
                                         value={formik.values.IDpegawai}/>
                             </div>
                             <div class='pets-name'>
@@ -92,6 +91,9 @@ const Faskes_Form_Pegawai=()=>{
                                 <input id='NamaCabangFaskes' name="NamaCabangFaskes" placeholder="Nama Cabang Faskes" type='text' onChange={formik.handleChange}
                                         value={formik.values.NamaCabangFaskes}/>
                             </div>
+                            {/* <div class='pets-name'>
+                                    <div></div>
+                                </div> */}
                         </div>
                         <div class='set'>
                             
@@ -111,6 +113,9 @@ const Faskes_Form_Pegawai=()=>{
                                 <label for='Password'>Password</label>
                                 <input id='Password' name="Password" placeholder='Password' type='password' onChange={formik.handleChange}
                                         value={formik.values.Password}></input>
+                            </div>
+                            <div class='pets-name'>
+                                    <button className='btn-outline-danger bt-sm  px-4 py-1 mt-4'>Submit</button>
                             </div>
                         </div>
                     </header>

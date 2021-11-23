@@ -1,4 +1,5 @@
 import './Tabel_PMI.css'
+import React, { useEffect, useState } from 'react';
 const Tabel_PMI_Inventori=(props)=>{
     return(
         <div className="containutama" >

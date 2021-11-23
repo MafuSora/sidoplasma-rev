@@ -26,7 +26,7 @@ const PMI_Form_Pendonor=()=>{
         initialValues: {
             NamaPendonor: '',
             Alamat:'',
-            NoHandphone: '',
+            NoHP: '',
             TanggalDonor:'',
             Usia :'',
             JenisKelamin:'',
@@ -125,28 +125,29 @@ const PMI_Form_Pendonor=()=>{
                                 <div class='pets-name'>
                                     <label for='Alamat'>Golongan Darah</label>
                                         <div class='radio-container'>
-                                            <input  id='goldar-A' name='kesediaan' type='radio' value='A'/>
+                                            <input  id='goldar-A' name='GolonganDarah' type='radio' value='A' onChange={(e) => formik.GolonganDarah=(e.target.value)}/>
                                             <label for='goldar-A'>A</label>
-                                            <input id='goldar-B' name='kesediaan' type='radio' value='B'/>
+                                            <input id='goldar-B' name='GolonganDarah' type='radio' value='B' onChange={(e) => formik.GolonganDarah=(e.target.value)}/>
                                             <label for='goldar-B'>B</label>
-                                            <input id='goldar-AB' name='kesediaan' type='radio' value='AB'/>
+                                            <input id='goldar-AB' name='GolonganDarah' type='radio' value='AB' onChange={(e) => formik.GolonganDarah=(e.target.value)}/>
                                             <label for='goldar-AB'>AB</label>
-                                            <input id='goldar-O' name='kesediaan' type='radio' value='O'/>
+                                            <input id='goldar-O' name='GolonganDarah' type='radio' value='O'  onChange={(e) => formik.GolonganDarah=(e.target.value)} />
                                             <label for='goldar-O'>O</label>
                                         </div>
+                                        
                                 </div>
                             </div>
                             <div className="set">
                             </div>
                             <div className='set'>
                                 
-                                <div class='pets-gender'>
+                            <div class='pets-gender'>
                                             <label for='pet-gender-female'>Rhesus </label>
                                             <div class='radio-container'>
-                                                <input  id='Rhesus' name='pet-gender' type='radio' value='+'/>
-                                                <label for='Rhesus'>+</label>
-                                                <input id='Rhesus' name='pet-gender' type='radio' value='-'/>
-                                                <label for='Rhesus'>-</label>
+                                                <input  id='RhesusPositif' name='JenisKelamin' type='radio' value='+' onChange={(e) => formik.Rhesus=(e.target.value)}/>
+                                                <label for='RhesusPositif'>+</label>
+                                                <input id='RhesusNegatif' name='JenisKelamin' type='radio' value='-' onChange={(e) => formik.Rhesus=(e.target.value)} />
+                                                <label for='RhesusNegatif'>-</label>
                                             </div>
                                 </div>
                                 <div class='pets-name'>

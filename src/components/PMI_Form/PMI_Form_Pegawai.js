@@ -46,25 +46,22 @@ const validate = values => {
     }
     return errors;
 };
-const PMI_Form_Pendonor=()=>{
-    const formik = useFormik({
-        initialValues: {
-            NamaPendonor: '',
-            Alamat:'',
-            NoHandphone: '',
-            TanggalDonor:'',
-            Usia :'',
-            JenisKelamin:'',
-            GolonganDarah:'',
-            Rhesus: '',
-            CabangPMI: '',
-        },
-        validate,
-        onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
-        },
-        });
+
 const PMI_Form_Pegawai=()=>{
+        const formik = useFormik({
+            initialValues: {
+                ID_Pegawai: '',
+                Nama_PMI:'',
+                nama_pegawai: '',
+                NoHP:'',
+                Username :'',
+                Password:''
+            },
+            validate,
+            onSubmit: values => {
+                alert(JSON.stringify(values, null, 2));
+            },
+            });
     return(
         <div className="containutama" >
             <div class='signup-container'>
@@ -135,7 +132,9 @@ const PMI_Form_Pegawai=()=>{
                         </div>
                     </div>
                     <div class='set'>
-                        
+                    <div class='pets-name'>
+                                    <button className='btn-outline-danger bt-sm  px-4 py-1 mt-4'>Submit</button>
+                                </div>
                         
                     </div>
                 </header>
@@ -150,5 +149,5 @@ const PMI_Form_Pegawai=()=>{
         </div>
     
     );
-}
-export default PMI_Form_Pegawai}
+};
+export default PMI_Form_Pegawai

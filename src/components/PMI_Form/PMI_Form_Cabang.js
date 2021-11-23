@@ -2,18 +2,14 @@ import './PMI_Form.css'
 import { useFormik} from 'formik';
 const validate = values => {
     const errors = {};
-    if (!values.IDFaskes) {
-        errors.IDFaskes = 'Required';
-    } else if (values.IDFaskes.length > 20) {
-        errors.IDFaskes = 'Maksimal 20 Karakter';
-    }
 
-    if (!values.Nama_Faskes) {
-        errors.Nama_Faskes = 'Required';
-    } else if (values.Nama_Faskes.length > 115) {
-        errors.Nama_Faskes = 'Maksimal 115 Karakter';
-    }
 
+    if (!values.Nama_PMI) {
+        errors.Nama_PMI = 'Required';
+    } else if (values.Nama_PMI.length > 115) {
+        errors.Nama_PMI = 'Maksimal 115 Karakter';
+    }
+    
     if (!values.Alamat) {
         errors.Alamat = 'Required';
     } else if (values.Alamat.length > 115) {
@@ -26,24 +22,14 @@ const validate = values => {
         errors.NoHP = 'Maksimal 14 Karakter';
     }
 
-    if (!values.Jenis_faskes) {
-        errors.Jenis_faskes = 'Required';
-    } else if (values.Jenis_faskes.length > 115) {
-        errors.Jenis_faskes = 'Maksimal 115 Karakter';
-    }
     return errors;
 };
 const PMI_Form_Cabang=()=>{
     const formik = useFormik({
         initialValues: {
-            NamaPegawaiFaskes: '',
-            Nama_Pasien: '',
+            Nama_PMI : '',
             Alamat:'',
             NoHP: '',
-            TanggalSembuh:'',
-            Usia :'',
-            GolonganDarah:'',
-            Rhesus: ''
         },
         validate,
         onSubmit: values => {
@@ -62,6 +48,7 @@ const PMI_Form_Cabang=()=>{
                                 <label for='pets-name'>Nama PMI</label>
                                 <input 
                                         id='Nama_PMI' 
+                                        name='Nama_PMI' 
                                         placeholder="Nama_PMI" 
                                         type='text'
                                         onChange={formik.handleChange}
@@ -72,7 +59,7 @@ const PMI_Form_Cabang=()=>{
                                     <label for='pets-birthday'>No. Telephone</label>
                                     <input 
                                     id='NoHP' 
-                                    name= "No Telephone"
+                                    name='NoHP' 
                                     type='text'
                                     onChange={formik.handleChange}
                                     value={formik.values.NoHP}
@@ -80,19 +67,21 @@ const PMI_Form_Cabang=()=>{
                                     {formik.errors.NoHP ? <div>{formik.errors.NoHP}</div> : null}
                             </div>
                         </div>
+                        <div className="set">
                         <div class='pets-weight'>
-                            <label for='pet-weight-0-25'>Alamat</label>
-                            <div class='radio-container'>
                             <label for='Alamat'>Alamat</label>
                                     <input 
                                     id='Alamat' 
+                                    name='Alamat' 
                                     placeholder="Alamat" 
                                     type='text'
                                     onChange={formik.handleChange}
                                     value={formik.values.Alamat}/>
                                     {formik.errors.Alamat ? <div>{formik.errors.Alamat}</div> : null}
-                            </div>
                         </div>
+                        <div class='pets-name'>
+                                    <button className='btn-outline-danger bt-sm  px-4 py-1 mt-4'>Submit</button>
+                                </div></div>
                     </header>
                     <footer>
                         <div class='set'>
