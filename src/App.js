@@ -20,27 +20,24 @@ import { useAuth } from './auth/auth-hook';
 import { AuthContext } from './auth/auth-context';
 
 function App() {
-  const { token, login, logout } = useAuth();
+  const { token, login, logout, role } = useAuth();
 
   return (
-
     <AuthContext.Provider
       value={{
         token,
         login,
         logout,
+        role,
       }}
     >
-
       <div Classname="App">
         <div className="backg">
           <Router>
-            
             <main>
               <Switch>
-
                 <Route path="/" exact>
-                  <Navbarguest/>
+                  <Navbarguest />
                   <AboutUs />
                   {/* <Gerbong/> */}
                 </Route>
@@ -56,7 +53,7 @@ function App() {
                 </Route>
 
                 <Route path="/TabelPMI">
-                  <Navbar/>
+                  <Navbar />
                   <TabelPMI></TabelPMI>
                 </Route>
 
@@ -69,8 +66,7 @@ function App() {
                   <Login></Login>
                 </Route>
 
-                <Redirect to="/"/>
-                
+                <Redirect to="/" />
               </Switch>
             </main>
           </Router>

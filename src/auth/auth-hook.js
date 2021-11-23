@@ -3,14 +3,16 @@ import { useHistory } from 'react-router-dom';
 
 export const useAuth = () => {
   const [token, setToken] = useState();
+  const [role, setRole] = useState();
 
-  const login = useCallback((token) => {
-    console.log(token);
+  const login = useCallback((token, role) => {
     setToken(token);
+    setRole(role);
     localStorage.setItem(
       'userData',
       JSON.stringify({
         token,
+        role,
       })
     );
   }, []);
@@ -33,5 +35,6 @@ export const useAuth = () => {
     login,
     logout,
     token,
+    role,
   };
 };
