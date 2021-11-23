@@ -31,18 +31,6 @@ const validate = values => {
     } else if (values.Jenis_faskes.length > 115) {
         errors.Jenis_faskes = 'Maksimal 115 Karakter';
     }
-
-    if (!values.Usia) {
-        errors.Usia = 'Required';
-    } else if (values.Usia.length > 20) {
-        errors.Usia = 'Pilih Jenis Kelamin';
-    }
-
-    if (!values.email) {
-        errors.email = 'Required';
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-        errors.email = 'Invalid email address';
-    }
     return errors;
 };
 const Faskes_Form_Cabang=()=>{
