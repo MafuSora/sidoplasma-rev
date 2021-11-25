@@ -21,7 +21,18 @@ const Tabel_Faskes_Pasien = (props) => {
       })
       .catch((err) => console.log(err));
   }, []);
-
+  const headers = { 'X-Parse-Application-Id': 'MyAPPID' };
+  const handleDelete=(ID)=>{
+      const url2 = url + '/'+ ID
+      fetch(url2, {
+          method: 'DELETE',
+          headers: headers,
+      })
+          .then((res) => res.json())
+          .then((res) => console.log(res))
+          .catch((err) => console.log(err));
+      console.log(url2)
+      };
   // const rawdata= fetch("./pmi.json")
   return (
     <div classname="contain">
@@ -30,29 +41,33 @@ const Tabel_Faskes_Pasien = (props) => {
           <thead>
             <tr>
               <th scope="col">Nama Pasien</th>
-              <th scope="col">Jenis Kelamin</th>
-              <th scope="col">Usia</th>
-              <th scope="col">No Handphone</th>
-              <th scope="col">Golongan Darah</th>
-              <th scope="col">Rhesus</th>
-              <th scope="col">Tanggal Sembuh</th>
               <th scope="col">Nama Pegawai Faskes</th>
-              <th scope="col">Ingin Donor</th>
+              <th scope="col">Jenis Kelamin</th>
+              <th scope="col">Alamat</th>
+              <th scope="col">Tanggal Sembuh</th>
+              <th scope="col">Usia</th>
+              <th scope="col">Golongan Darah </th>
+              <th scope="col">Rhesus</th>
+              <th scope="col">No Handphone</th>
+              <th scope="col">Hapus</th>
+              
+              
             </tr>
           </thead>
           <tbody>
             {pasien.length > 0 &&
               pasien.map((item) => (
                 <tr>
-                  <th scope="col">{item.nama}</th>
-                  <th scope="col">{item.Jenis_Kelamin}</th>
-                  <th scope="col">{item.usia}</th>
-                  <th scope="col">{item.no_hp}</th>
-                  <th scope="col">{item.golongan_darah.toUpperCase()}</th>
-                  <th scope="col">{item.rhesus}</th>
-                  <th scope="col">{item.tanggal_Sembuh_covid}</th>
-                  <th scope="col">Joni</th>
-                  <th scope="col">{item.ingin_donor ? 'Iya' : 'Tidak'}</th>
+                  <th scope="col">{item.Nama_Pasien}</th>
+                  <th scope="col">{item.NamaPegawaiFaskes}</th>
+                  <th scope="col">{item.JenisKelamin}</th>
+                  <th scope="col">{item.alamat}</th>
+                  <th scope="col">{item.TanggalSembuh}</th>
+                  <th scope="col">{item.Usia}</th>
+                  <th scope="col">{item.GolonganDarah}</th>
+                  <th scope="col">{item.Rhesus}</th>
+                  <th scope="col">{item.NoHP}</th>
+                  <th><button type='button' onClick={()=>handleDelete(item.objectId) && alert("Successful Deleted Refresh The Page")}>Delete</button></th>
                 </tr>
               ))}
           </tbody>
