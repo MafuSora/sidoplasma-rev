@@ -21,7 +21,18 @@ const Tabel_Faskes_Pasien = (props) => {
       })
       .catch((err) => console.log(err));
   }, []);
-
+  const headers = { 'X-Parse-Application-Id': 'MyAPPID' };
+  const handleDelete=(ID)=>{
+      const url2 = url + '/'+ ID
+      fetch(url2, {
+          method: 'DELETE',
+          headers: headers,
+      })
+          .then((res) => res.json())
+          .then((res) => console.log(res))
+          .catch((err) => console.log(err));
+      console.log(url2)
+      };
   // const rawdata= fetch("./pmi.json")
   return (
     <div classname="contain">
@@ -38,6 +49,7 @@ const Tabel_Faskes_Pasien = (props) => {
               <th scope="col">Golongan Darah </th>
               <th scope="col">Rhesus</th>
               <th scope="col">No Handphone</th>
+              <th scope="col">Hapus</th>
               
               
             </tr>
@@ -55,6 +67,7 @@ const Tabel_Faskes_Pasien = (props) => {
                   <th scope="col">{item.GolonganDarah}</th>
                   <th scope="col">{item.Rhesus}</th>
                   <th scope="col">{item.NoHP}</th>
+                  <th><button type='button' onClick={()=>handleDelete(item.objectId) && alert("Successful Deleted Refresh The Page")}>Delete</button></th>
                 </tr>
               ))}
           </tbody>

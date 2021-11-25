@@ -6,11 +6,8 @@ const Tabel_PMI_Inventori=(props)=>{
     
         const [pasien, setPasien] = useState([]);
         const [radioVal, setRadioVal] = useState('');
-        const [Apos, setApos] = useState(0);const [Aneg, setAneg] = useState(0);
-        const [Bpos, setBpos] = useState(0);const [Bneg, setBneg] = useState(0);
-        const [ABpos, setABpos] = useState(0);const [ABneg, setABneg] = useState(0);
-        const [Opos, setOpos] = useState(0);const [Oneg, setOneg] = useState(0);
-       
+        const[jumlahDarah,setJumlahdarah]=useState({});
+        var temp=[]
         useEffect(() => {
             fetch(url, {
             headers: header,
@@ -25,31 +22,69 @@ const Tabel_PMI_Inventori=(props)=>{
         }, []);
         function genderCount(pasien) {
             return pasien.reduce((acc, pasien) => {
-                if (pasien.GolonganDarah === 'A') {
-                    acc.male++;
+                
+                if (pasien.GolonganDarah === 'A' &&pasien.Rhesus === '+') {
+
+                    acc.apos++;
                 }
-                else if (pasien.GolonganDarah === 'B') {
-                    acc.female++;
+                else if (pasien.GolonganDarah === 'A' &&pasien.Rhesus === '-') {
+                    acc.aneg++;
                 }
-                else if (pasien.GolonganDarah === 'AB') {
-                    acc.female++;
+                else if (pasien.GolonganDarah === 'B' &&pasien.Rhesus === '+') {
+                    acc.bpos++;
                 }
-                else if (pasien.GolonganDarah === 'O') {
-                    acc.female++;
+                else if (pasien.GolonganDarah === 'B' &&pasien.Rhesus === '-') {
+                    acc.bneg++;
+                }
+                else if (pasien.GolonganDarah === 'AB' &&pasien.Rhesus === '+') {
+                    acc.abpos++;
+                }
+                else if (pasien.GolonganDarah === 'AB' &&pasien.Rhesus === '-') {
+                    acc.abneg++;
+                }
+                else if (pasien.GolonganDarah === 'O' &&pasien.Rhesus === '+') {
+                    acc.opos++;
+                }
+                else if (pasien.GolonganDarah === 'O' &&pasien.Rhesus === '-') {
+                    acc.oneg++;
                 }
                 console.log(acc)
-                return acc;
+                temp=acc
+                return acc ;
                 
-            }, {male: 0, female: 0});
+            }, {apos: 0, aneg: 0,bpos: 0, bneg: 0,abpos: 0, abneg: 0,opos: 0, oneg: 0});
         }
         genderCount(pasien)
-        const dict_invent={
-            GolonganDarah:["A","A","B","B","AB","AB","O","O"],
-            Rhesus:["+","-","+","-","+","-","+","-"],
-            Jumlah:[Apos,Aneg,Bpos,Bneg,ABpos,ABneg,Opos,Oneg]
-        }
+        
+        const dict_invent=[
+            {GolonganDarah:"A",
+            Rhesus:"+",
+            Jumlah:temp.apos},
+            {GolonganDarah:"A",
+            Rhesus:"-",
+            Jumlah:temp.aneg},
+            {GolonganDarah:"B",
+            Rhesus:"+",
+            Jumlah:temp.bpos},
+            {GolonganDarah:"B",
+            Rhesus:"-",
+            Jumlah:temp.bneg},
+            {GolonganDarah:"AB",
+            Rhesus:"+",
+            Jumlah:temp.abpos},
+            {GolonganDarah:"AB",
+            Rhesus:"-",
+            Jumlah:temp.abneg},
+            {GolonganDarah:"O",
+            Rhesus:"+",
+            Jumlah:temp.opos},
+            {GolonganDarah:"O",
+            Rhesus:"-",
+            Jumlah:temp.oneg},
+        ]
         console.log(pasien)
         console.log(dict_invent)
+        console.log(temp)
     return(
         <div className="containutama" >
             <div className="table-responsive p-2">
@@ -59,20 +94,25 @@ const Tabel_PMI_Inventori=(props)=>{
                                 <th scope="col">Golongan Darah</th>
                                 <th scope="col">Rhesus</th>
                                 {/* <th scope="col">Tanggal Kadaluarsa</th> */}
-                                <th scope="col">Cabang PMI</th>
-                                <th scope="col">No Telephone</th>
+                                {/* <th scope="col">Cabang PMI</th>
+                                <th scope="col">No Telephone</th> */}
                                 <th scope="col">Stok</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
-                            {/* {pasien.length > 0 &&
-                                pasien.map((item) => (
-                             
-                                
-                            ))} */}
+                        {dict_invent.length > 0 &&
+                            dict_invent.map((item) => (
+                                <tr>
+                                <th scope="col">{item.GolonganDarah}</th>
+                                <th scope="col">{item.Rhesus}</th>
+                                <th scope="col">{item.Jumlah}</th>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
                 </div>
+                
                 {/* <th scope="col">{item.NamaPendonor}</th>
                                 <th scope="col">{item.CabangPMI}</th>
                                 <th scope="col">{item.GolonganDarah}</th>

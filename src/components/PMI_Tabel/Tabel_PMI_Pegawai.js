@@ -18,6 +18,18 @@ const Tabel_PMI_Pegawai=(props)=>{
         })
         .catch((err) => console.log(err));
     }, []);
+    const headers = { 'X-Parse-Application-Id': 'MyAPPID' };
+    const handleDelete=(ID)=>{
+        const url2 = url + '/'+ ID
+        fetch(url2, {
+            method: 'DELETE',
+            headers: headers,
+        })
+            .then((res) => res.json())
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err));
+        console.log(url2)
+        };
     return(
         <div className="containutama" >
             <div className="table-responsive p-2">
@@ -29,6 +41,7 @@ const Tabel_PMI_Pegawai=(props)=>{
                                 <th scope="col">Nama Pegawai</th>
                                 <th scope="col">Nama PMI</th>
                                 <th scope="col">No Handphone</th>
+                                <th scope="col">Hapus</th>
                     
                             </tr>
                         </thead>
@@ -40,6 +53,7 @@ const Tabel_PMI_Pegawai=(props)=>{
                                 <th scope="col">{item.Nama_PMI}</th>
                                 <th scope="col">{item.nama_pegawai}</th>
                                 <th scope="col">{item.NoHP}</th>
+                                <th><button type='button' onClick={()=>handleDelete(item.objectId) && alert("Successful Deleted Refresh The Page")}>Delete</button></th>
                                 </tr>
                             ))}
                         </tbody>

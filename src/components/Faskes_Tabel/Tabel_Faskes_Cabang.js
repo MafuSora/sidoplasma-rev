@@ -19,6 +19,18 @@ const Tabel_Faskes_Cabang=(props)=>{
         .catch((err) => console.log(err));
     }, []);
     console.log(pasien)
+    const headers = { 'X-Parse-Application-Id': 'MyAPPID' };
+    const handleDelete=(ID)=>{
+        const url2 = url + '/'+ ID
+        fetch(url2, {
+            method: 'DELETE',
+            headers: headers,
+        })
+            .then((res) => res.json())
+            .then((res) => console.log(res))
+            .catch((err) => console.log(err));
+        console.log(url2)
+        };
     return(
         <div className="containutama" >
             <div className="table-responsive p-2">
@@ -30,6 +42,7 @@ const Tabel_Faskes_Cabang=(props)=>{
                                 <th scope="col">Jenis Faskes</th>
                                 <th scope="col">No Telephone</th>
                                 <th scope="col">Alamat</th>
+                                <th scope="col">Hapus</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -41,6 +54,7 @@ const Tabel_Faskes_Cabang=(props)=>{
                                 <td scope="col">{item.Jenis_Faskes}</td>
                                 <td scope="col">{item.NoHP}</td>
                                 <td scope="col">{item.Alamat}</td>
+                                <th><button type='button' onClick={()=>handleDelete(item.objectId) && alert("Successful Deleted Refresh The Page")}>Delete</button></th>
                                 </tr>
                             ))}
                         </tbody>
