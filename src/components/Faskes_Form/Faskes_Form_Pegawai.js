@@ -178,12 +178,12 @@ const Faskes_Form_Pegawai = () => {
               </div>
             </div>
           </header>
-          <footer>
+          {/* <footer>
             <div class="set">
               <button id="back">Back</button>
               <button id="next">Next</button>
             </div>
-          </footer>
+          </footer> */}
         </div>
       </div>
     </div>
