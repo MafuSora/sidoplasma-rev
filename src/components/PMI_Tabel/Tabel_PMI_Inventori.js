@@ -1,9 +1,11 @@
 import './Tabel_PMI.css'
 import React, { useEffect, useState } from 'react';
 const Tabel_PMI_Inventori=(props)=>{
+    
+    
     const url = 'https://appsa.awanpintar.com/classes/Pendonor';
         const header = { 'X-Parse-Application-Id': 'MyAPPID' };
-    
+        
         const [pasien, setPasien] = useState([]);
         const [radioVal, setRadioVal] = useState('');
         const[jumlahDarah,setJumlahdarah]=useState({});
@@ -20,32 +22,43 @@ const Tabel_PMI_Inventori=(props)=>{
             .catch((err) => console.log(err));
             
         }, []);
+        function addMonths(date, months) {
+            var d = date.getDate();
+            date.setMonth(date.getMonth() + +months);
+            if (date.getDate() != d) {
+              date.setDate(0);
+            }
+            return date;
+        }
+        let current = new Date();
+        let cTime = current.getHours() ;
+        // console.log(cTime);
         function genderCount(pasien) {
             return pasien.reduce((acc, pasien) => {
                 
-                if (pasien.GolonganDarah === 'A' &&pasien.Rhesus === '+') {
+                if (pasien.GolonganDarah === 'A' &&pasien.Rhesus === '+' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
 
                     acc.apos++;
                 }
-                else if (pasien.GolonganDarah === 'A' &&pasien.Rhesus === '-') {
+                else if (pasien.GolonganDarah === 'A' &&pasien.Rhesus === '-' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
                     acc.aneg++;
                 }
-                else if (pasien.GolonganDarah === 'B' &&pasien.Rhesus === '+') {
+                else if (pasien.GolonganDarah === 'B' &&pasien.Rhesus === '+' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
                     acc.bpos++;
                 }
-                else if (pasien.GolonganDarah === 'B' &&pasien.Rhesus === '-') {
+                else if (pasien.GolonganDarah === 'B' &&pasien.Rhesus === '-' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
                     acc.bneg++;
                 }
-                else if (pasien.GolonganDarah === 'AB' &&pasien.Rhesus === '+') {
+                else if (pasien.GolonganDarah === 'AB' &&pasien.Rhesus === '+' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
                     acc.abpos++;
                 }
-                else if (pasien.GolonganDarah === 'AB' &&pasien.Rhesus === '-') {
+                else if (pasien.GolonganDarah === 'AB' &&pasien.Rhesus === '-' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
                     acc.abneg++;
                 }
-                else if (pasien.GolonganDarah === 'O' &&pasien.Rhesus === '+') {
+                else if (pasien.GolonganDarah === 'O' &&pasien.Rhesus === '+' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
                     acc.opos++;
                 }
-                else if (pasien.GolonganDarah === 'O' &&pasien.Rhesus === '-') {
+                else if (pasien.GolonganDarah === 'O' &&pasien.Rhesus === '-' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
                     acc.oneg++;
                 }
                 console.log(acc)
@@ -85,6 +98,85 @@ const Tabel_PMI_Inventori=(props)=>{
         console.log(pasien)
         console.log(dict_invent)
         console.log(temp)
+
+       
+        const nopeapos=[]
+        const nopeaneg=[]
+        const nopebpos=[]
+        const nopebneg=[]
+        const nopeabpos=[]
+        const nopeabneg=[]
+        const nopeopos=[]
+        const nopeoneg=[]
+        function Nope(pasien) {
+            return pasien.reduce((filteredByValue, pasien) => {
+                
+                if (pasien.GolonganDarah === 'A' &&pasien.Rhesus === '+' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
+                    nopeapos.push(pasien.NoHP)
+                }
+                else if (pasien.GolonganDarah === 'A' &&pasien.Rhesus === '-' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
+                    nopeaneg.push(pasien.NoHP)
+                }
+                else if (pasien.GolonganDarah === 'B' &&pasien.Rhesus === '+' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
+                    nopebpos.push(pasien.NoHP)
+                }
+                else if (pasien.GolonganDarah === 'B' &&pasien.Rhesus === '-' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
+                    nopebneg.push(pasien.NoHP)
+                }
+                else if (pasien.GolonganDarah === 'AB' &&pasien.Rhesus === '+' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
+                    nopeabpos.push(pasien.NoHP)
+                }
+                else if (pasien.GolonganDarah === 'AB' &&pasien.Rhesus === '-' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
+                    nopeabneg.push(pasien.NoHP)
+                }
+                else if (pasien.GolonganDarah === 'O' &&pasien.Rhesus === '+' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
+                    nopeopos.push(pasien.NoHP)
+                }
+                else if (pasien.GolonganDarah === 'O' &&pasien.Rhesus === '-' && current.toISOString() < addMonths(new Date(pasien.TanggalDonor),3).toISOString()) {
+                    nopeoneg.push(pasien.NoHP)
+                }
+                return filteredByValue ;     
+            }, {apos: 0, aneg: 0,bpos: 0, bneg: 0,abpos: 0, abneg: 0,opos: 0, oneg: 0});
+        }
+        Nope(pasien)
+        console.log(nopeapos)
+        console.log(nopeaneg)
+        console.log(nopebpos)
+        console.log(nopebneg)
+        console.log(nopeabpos)
+        console.log(nopeabneg)
+        console.log(nopeopos)
+        console.log(nopeoneg)
+        console.log(cTime)
+        function whatsappDialer(cTime) {
+                if (cTime===7) {
+                    if (temp.apos===0) {
+                        console.log(nopeapos)
+                    }
+                    else if (temp.aneg===0) {
+                        console.log(nopeaneg)
+                    }
+                    else if (temp.bpos===0) {
+                        console.log(nopebpos)
+                    }
+                    else if (temp.bneg===0) {
+                        console.log(nopebneg)
+                    }
+                    else if (temp.abpos===0) {
+                            console.log(nopeabpos)
+                        }
+                    else if (temp.abneg===0) {
+                            console.log(nopeabneg)
+                    }
+                    else if (temp.opos===0) {
+                        console.log(nopeopos)
+                    }
+                    else if (temp.oneg===0) {
+                        console.log(nopeoneg)
+                }
+        }}
+
+
     return(
         <div className="containutama" >
             <div className="table-responsive p-2">
@@ -101,6 +193,7 @@ const Tabel_PMI_Inventori=(props)=>{
                             </tr>
                         </thead>
                         <tbody>
+                        
                         {dict_invent.length > 0 &&
                             dict_invent.map((item) => (
                                 <tr>
@@ -110,6 +203,7 @@ const Tabel_PMI_Inventori=(props)=>{
                                 </tr>
                             ))}
                         </tbody>
+                        
                     </table>
                 </div>
                 
@@ -124,6 +218,7 @@ const Tabel_PMI_Inventori=(props)=>{
                                 <th scope="col">{item.TanggalDonor}</th> */}
             </div>
     );
+    
 }
 
 export default Tabel_PMI_Inventori

@@ -30,6 +30,15 @@ const Tabel_PMI_Pendonor=(props)=>{
             .catch((err) => console.log(err));
         console.log(url2)
         };
+    function addMonths(date, months) {
+            var d = date.getDate();
+            date.setMonth(date.getMonth() + +months);
+            if (date.getDate() != d) {
+              date.setDate(0);
+            }
+            return date;
+        }
+        let current = new Date();
     return(
         
         <div className="containutama" >
@@ -47,6 +56,8 @@ const Tabel_PMI_Pendonor=(props)=>{
                                 <th scope="col">Alamat</th>
                                 <th scope="col">No Handphone</th>
                                 <th scope="col">Tanggal Donor</th>
+                                <th scope="col">Tanggal Kadaluarsa</th>
+                                <th scope="col">Status</th>
                                 <th scope="col">Hapus</th>
                             </tr>
                         </thead>
@@ -63,6 +74,8 @@ const Tabel_PMI_Pendonor=(props)=>{
                                 <th scope="col">{item.Alamat}</th>
                                 <th scope="col">{item.NoHP}</th>
                                 <th scope="col">{item.TanggalDonor}</th>
+                                <th scope="col">{addMonths(new Date(item.TanggalDonor),3).toISOString()}</th>
+                                <th scope="col">{current.toISOString() < addMonths(new Date(item.TanggalDonor),3).toISOString()?<div>Available</div>:<div>Expired</div>}</th>
                                 <th><button type='button' onClick={()=>handleDelete(item.objectId) && alert("Successful Deleted Refresh The Page")}>Delete</button></th>
                                 </tr>
                             ))}
