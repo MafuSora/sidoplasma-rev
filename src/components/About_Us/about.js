@@ -24,7 +24,7 @@ const Faskes_Konten_1=()=>{
                         {/* <img src="https://i.pinimg.com/564x/22/2e/40/222e4048c228885608cc11aa7cc608b2.jpg" className="carousel slide m-4 rounded ukuran" alt="..." className="suntik"/> */}
                         <h1 className="tulisanlanding">Selamat Datang</h1>
                         <p className="tulisanlanding">Sidoplasma merupakan website yang terintegrasi dengan auto message digunakan untuk pendataan calon pendonor plasma konvalesen COVID-19 oleh berbagai fasilitas kesehatan dan dapat diakses oleh Palang Merah Indonesia (PMI).</p>
-                        <a href="#" className="btn btn-lg btn-danger"> Gabung Sekarang </a>
+                        <a href="/login" className="btn btn-lg btn-danger"> Gabung Sekarang </a>
                     </div>
                 </div>  
                 <div className="Container active">

@@ -42,7 +42,7 @@ const Footer = () => {
 				<div horizontal >
 					<p class="blackText">
 						<span></span>
-						Sidoplasma is the use of media in the form of a website that is integrated with auto messages is used to collect data on prospective COVID-19 convalescent plasma donors by various health facilities and can be accessed by Indonesian Red Cross Society(PMI).
+						Sidoplasma ditujukan untuk fasilitas kesehatan di Indonesia dan PMI untuk memberikan wadah distribusi plasma secara efektif, efisien, dan terpercaya.
 					</p>
 				</div>
 				<div class="footer-icons"></div>

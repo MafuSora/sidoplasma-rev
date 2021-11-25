@@ -74,7 +74,7 @@ const Tabel_Faskes_Pasien = (props) => {
           <tr></tr>
         </table>
         {/* CONTOH RADIO */}
-        <div
+        {/* <div
           class="form-check"
           //   style={{ display: 'flex', flexDirection: 'column' }}
         >
@@ -102,7 +102,7 @@ const Tabel_Faskes_Pasien = (props) => {
           >
             Nisa
           </label>
-        </div>
+        </div> */}
       </div>
     </div>
   );

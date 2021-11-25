@@ -52,8 +52,8 @@ const validate = (values) => {
 
   if (!values.Usia) {
     errors.Usia = 'Required';
-  } else if (values.Usia.length > 20) {
-    errors.Usia = 'Pilih Jenis Kelamin';
+  } else if (values.Usia.length > 3) {
+    errors.Usia = 'Maksimal 3 Karakter';
   }
 
  
@@ -307,12 +307,12 @@ const Faskes_Form_Pasien = () => {
               </div>
             </form>
           </header>
-          <footer>
+          {/* <footer>
             <div class="set">
               <button id="back">Back</button>
               <button id="next">Next</button>
             </div>
-          </footer>
+          </footer> */}
         </div>
       </div>
     </div>
