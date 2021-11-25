@@ -49,10 +49,11 @@ const Faskes_Form_Cabang = () => {
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
       let data = {
-        Nama_Instansi: values.Nama_Faskes,
+        IDFaskes: values.IDFaskes,
+        Nama_Faskes: values.Nama_Faskes,
         Jenis_Faskes: values.Jenis_faskes,
         Alamat: values.Alamat,
-        Nomor_Telephone: values.NoHP,
+        NoHP: values.NoHP,
       };
 
       fetch(url, {

@@ -37,12 +37,6 @@ const validate = (values) => {
   } else if (values.Password.length > 115) {
     errors.Password = 'Maksimal 115 Karakter';
   }
-
-  if (!values.email) {
-    errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
-  }
   return errors;
 };
 
@@ -62,9 +56,11 @@ const PMI_Form_Pegawai = () => {
     onSubmit: (values) => {
       let data = {
         Username: values.Username,
-        Passowrd: values.Password,
-        No_Handphone: values.NoHP,
-        Nama: values.nama_pegawai,
+        Password: values.Password,
+        NoHP: values.NoHP,
+        nama_pegawai: values.nama_pegawai,
+        Nama_PMI: values.Nama_PMI,
+        ID_Pegawai: values.ID_Pegawai,
       };
 
       fetch(url, {
@@ -104,7 +100,7 @@ const PMI_Form_Pegawai = () => {
                 <input
                   id="Nama_PMI"
                   name="Nama_PMI"
-                  placeholder="Nama_PMI"
+                  placeholder="Nama PMI"
                   type="text"
                   onChange={formik.handleChange}
                   value={formik.values.Nama_PMI}
@@ -122,7 +118,9 @@ const PMI_Form_Pegawai = () => {
                   onChange={formik.handleChange}
                   value={formik.values.nama_pegawai}
                   placeholder="Nama Pegawai"
-                />
+                />{formik.errors.nama_pegawai ? (
+                  <div>{formik.errors.nama_pegawai}</div>
+                ) : null}
               </div>
             </div>
             <div class="set">
@@ -135,7 +133,9 @@ const PMI_Form_Pegawai = () => {
                   onChange={formik.handleChange}
                   value={formik.values.NoHP}
                   placeholder="+62XXXXXXX"
-                />
+                />{formik.errors.NoHP ? (
+                  <div>{formik.errors.NoHP}</div>
+                ) : null}
               </div>
               <div class="pets-birthday">
                 <label for="pets-birthday">Username</label>
@@ -157,7 +157,7 @@ const PMI_Form_Pegawai = () => {
                   id="Password"
                   name="Password"
                   placeholder="Password"
-                  type="text"
+                  type="password"
                   onChange={formik.handleChange}
                   value={formik.values.Password}
                 ></input>

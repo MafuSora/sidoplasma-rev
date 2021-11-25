@@ -49,7 +49,7 @@ const Tabel_Faskes_Pasien = (props) => {
                   <th scope="col">{item.Nama_Pasien}</th>
                   <th scope="col">{item.NamaPegawaiFaskes}</th>
                   <th scope="col">{item.JenisKelamin}</th>
-                  <th scope="col">{item.Alamat}</th>
+                  <th scope="col">{item.alamat}</th>
                   <th scope="col">{item.TanggalSembuh}</th>
                   <th scope="col">{item.Usia}</th>
                   <th scope="col">{item.GolonganDarah}</th>

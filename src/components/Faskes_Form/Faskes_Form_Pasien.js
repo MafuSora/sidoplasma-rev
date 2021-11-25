@@ -27,10 +27,21 @@ const validate = (values) => {
     errors.NoHP = 'Maksimal 115 Karakter';
   }
 
-  if (!values.TanggalSembuh) {
-    errors.TanggalSembuh = 'Required';
-  } else if (values.TanggalSembuh.length > 115) {
-    errors.TanggalSembuh = 'Maksimal 115 Karakter';
+  if (!values.JenisKelamin) {
+    errors.JenisKelamin = 'Required';
+  } else if (values.JenisKelamin.length > 115) {
+    errors.JenisKelamin = 'Maksimal 115 Karakter';
+  }
+  if (!values.Rhesus) {
+    errors.Rhesus = 'Required';
+  } else if (values.Rhesus.length > 115) {
+    errors.Rhesus = 'Maksimal 115 Karakter';
+  }
+
+  if (!values.GolonganDarah) {
+    errors.GolonganDarah = 'Required';
+  } else if (values.GolonganDarah.length > 115) {
+    errors.GolonganDarah = 'Maksimal 115 Karakter';
   }
 
   if (!values.TanggalSembuh) {
@@ -45,11 +56,7 @@ const validate = (values) => {
     errors.Usia = 'Pilih Jenis Kelamin';
   }
 
-  if (!values.email) {
-    errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
-  }
+ 
   return errors;
 };
 const Faskes_Form_Pasien = () => {
@@ -77,14 +84,15 @@ const Faskes_Form_Pasien = () => {
       console.log(values);
 
       let data = {
-        nama: values.Nama_Pasien,
-        alamat: values.Alamat,
-        no_hp: values.NoHP,
-        tanggal_Sembuh_covid: values.TanggalSembuh,
-        Jenis_Kelamin: values.JenisKelamin,
-        golongan_darah: values.GolonganDarah,
-        rhesus: values.Rhesus,
-        usia: +values.Usia,
+        Nama_Pasien: values.Nama_Pasien,
+        NamaPegawaiFaskes: values.NamaPegawaiFaskes,
+        Alamat: values.Alamat,
+        NoHP: values.NoHP,
+        TanggalSembuh: values.TanggalSembuh,
+        JenisKelamin: values.JenisKelamin,
+        GolonganDarah: values.GolonganDarah,
+        Rhesus: values.Rhesus,
+        Usia: values.Usia,
       };
 
       fetch(url, {
@@ -156,7 +164,8 @@ const Faskes_Form_Pasien = () => {
                       name="JenisKelamin"
                       type="radio"
                       value="Perempuan"
-                      onChange={(e) => (formik.JenisKelamin = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.JenisKelamin==="Perempuan" }
                     />
                     <label for="pet-gender-female">Female</label>
                     <input
@@ -164,10 +173,14 @@ const Faskes_Form_Pasien = () => {
                       name="JenisKelamin"
                       type="radio"
                       value="Laki Laki"
-                      onChange={(e) => (formik.JenisKelamin = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.JenisKelamin==="Laki Laki" }
                     />
                     <label for="pet-gender-male">Male</label>
                   </div>
+                  {formik.errors.JenisKelamin ? (
+                    <div>{formik.errors.JenisKelamin}</div>
+                  ) : null}
                 </div>
                 <div class="pets-name">
                   <label for="Alamat">Alamat</label>
@@ -215,21 +228,26 @@ const Faskes_Form_Pasien = () => {
                   <div class="radio-container">
                     <input
                       id="RhesusPositif"
-                      name="pet-gender"
+                      name="Rhesus"
                       type="radio"
                       value="+"
-                      onChange={(e) => (formik.Rhesus = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.Rhesus==="+" }
                     />
                     <label for="RhesusPositif">+</label>
                     <input
                       id="RhesusNegatif"
-                      name="pet-gender"
+                      name="Rhesus"
                       type="radio"
                       value="-"
-                      onChange={(e) => (formik.Rhesus = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.Rhesus==="-" }
                     />
                     <label for="RhesusNegatif">-</label>
                   </div>
+                  {formik.errors.Rhesus ? (
+                    <div>{formik.errors.Rhesus}</div>
+                  ) : null}
                 </div>
               </div>
               <div className="set">
@@ -241,7 +259,8 @@ const Faskes_Form_Pasien = () => {
                       name="GolonganDarah"
                       type="radio"
                       value="A"
-                      onChange={(e) => (formik.GolonganDarah = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.GolonganDarah==="A" }
                     />
                     <label for="goldar-A">A</label>
                     <input
@@ -249,7 +268,8 @@ const Faskes_Form_Pasien = () => {
                       name="GolonganDarah"
                       type="radio"
                       value="B"
-                      onChange={(e) => (formik.GolonganDarah = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.GolonganDarah==="B" }
                     />
                     <label for="goldar-B">B</label>
                     <input
@@ -257,7 +277,8 @@ const Faskes_Form_Pasien = () => {
                       name="GolonganDarah"
                       type="radio"
                       value="AB"
-                      onChange={(e) => (formik.GolonganDarah = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.GolonganDarah==="AB" }
                     />
                     <label for="goldar-AB">AB</label>
                     <input
@@ -265,14 +286,18 @@ const Faskes_Form_Pasien = () => {
                       name="GolonganDarah"
                       type="radio"
                       value="O"
-                      onChange={(e) => (formik.GolonganDarah = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.GolonganDarah==="O" }
                     />
                     <label for="goldar-O">O</label>
                   </div>
+                  {formik.errors.GolonganDarah ? (
+                    <div>{formik.errors.GolonganDarah}</div>
+                  ) : null}
                 </div>
                 <div class="pets-name">
                   <button
-                    type="button"
+                    type="submit"
                     className="btn-outline-danger bt-sm  px-4 py-1 mt-4"
                     onClick={formik.handleSubmit}
                   >

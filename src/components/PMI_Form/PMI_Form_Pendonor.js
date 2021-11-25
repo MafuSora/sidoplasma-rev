@@ -2,23 +2,60 @@ import './PMI_Form.css';
 import { useFormik } from 'formik';
 const validate = (values) => {
   const errors = {};
-  if (!values.NamaPasien) {
-    errors.NamaPasien = 'Required';
-  } else if (values.NamaPasien.length > 115) {
-    errors.NamaPasien = 'Maksimal 115 Karakter';
+  if (!values.NamaPendonor) {
+    errors.NamaPendonor = 'Required';
+  } else if (values.NamaPendonor.length > 115) {
+    errors.NamaPendonor = 'Maksimal 115 Karakter';
+  }
+
+  if (!values.Alamat) {
+    errors.Alamat = 'Required';
+  } else if (values.Alamat.length > 115) {
+    errors.Alamat = 'Maksimal 115 Karakter';
+  }
+
+  if (!values.CabangPMI) {
+    errors.CabangPMI = 'Required';
+  } else if (values.CabangPMI.length > 115) {
+    errors.CabangPMI = 'Maksimal 115 Karakter';
+  }
+
+  if (!values.NoHP) {
+    errors.NoHP = 'Required';
+  } else if (values.NoHP.length > 115) {
+    errors.NoHP = 'Maksimal 115 Karakter';
   }
 
   if (!values.JenisKelamin) {
     errors.JenisKelamin = 'Required';
-  } else if (values.JenisKelamin.length > 20) {
-    errors.JenisKelamin = 'Pilih Jenis Kelamin';
+  } else if (values.JenisKelamin.length > 115) {
+    errors.JenisKelamin = 'Maksimal 115 Karakter';
+  }
+  if (!values.Rhesus) {
+    errors.Rhesus = 'Required';
+  } else if (values.Rhesus.length > 115) {
+    errors.Rhesus = 'Maksimal 115 Karakter';
   }
 
-  if (!values.email) {
-    errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
+  if (!values.GolonganDarah) {
+    errors.GolonganDarah = 'Required';
+  } else if (values.GolonganDarah.length > 115) {
+    errors.GolonganDarah = 'Maksimal 115 Karakter';
   }
+
+  if (!values.TanggalDonor) {
+    errors.TanggalDonor = 'Required';
+  } else if (values.TanggalDonor.length > 115) {
+    errors.TanggalDonor = 'Maksimal 115 Karakter';
+  }
+
+  if (!values.Usia) {
+    errors.Usia = 'Required';
+  } else if (values.Usia > 200) {
+    errors.Usia = 'Pilih Jenis Kelamin';
+  }
+
+
   return errors;
 };
 const PMI_Form_Pendonor = () => {
@@ -31,23 +68,24 @@ const PMI_Form_Pendonor = () => {
       Alamat: '',
       NoHP: '',
       TanggalDonor: '',
-      Usia: '',
-      JenisKelamin: 'Female',
-      GolonganDarah: 'A',
-      Rhesus: '+',
+      Usia:0,
+      JenisKelamin: '',
+      GolonganDarah: '',
+      Rhesus: '',
       CabangPMI: '',
     },
     validate,
     onSubmit: (values) => {
       let data = {
-        Nama: values.NamaPendonor,
+        NamaPendonor: values.NamaPendonor,
         Alamat: values.Alamat,
-        No_Handphone: values.NoHP,
-        Tanggal_Donor: values.TanggalDonor,
-        Usia: +values.Usia,
-        Jenis_Kelamin: values.JenisKelamin,
-        Golongan_darah: values.GolonganDarah,
+        NoHP: values.NoHP,
+        TanggalDonor: values.TanggalDonor,
+        Usia: values.Usia,
+        JenisKelamin: values.JenisKelamin,
+        GolonganDarah: values.GolonganDarah,
         Rhesus: values.Rhesus,
+        CabangPMI: values.CabangPMI,
       };
 
       fetch(url, {
@@ -67,7 +105,7 @@ const PMI_Form_Pendonor = () => {
           <header>
             <h1>Input Data Pendonor</h1>
             <br />
-            <form onSubmit={formik.handleSubmit}>
+            <form>
               <div class="set">
                 <div class="pets-name">
                   <label htmlfor="NamaPendonor">Nama Pendonor</label>
@@ -77,30 +115,11 @@ const PMI_Form_Pendonor = () => {
                     placeholder="Nama Pendonor"
                     type="text"
                     onChange={formik.handleChange}
-                    value={formik.values.IDPendonor}
+                    value={formik.values.NamaPendonor}
                   />
-                  {formik.errors.IDPendonor ? (
-                    <div>{formik.errors.IDPendonor}</div>
+                  {formik.errors.NamaPendonor ? (
+                    <div>{formik.errors.NamaPendonor}</div>
                   ) : null}
-                </div>
-                <div class="pets-gender">
-                  <label for="gender">Jenis Kelamin</label>
-                  <div class="radio-container">
-                    <input
-                      id="pet-gender-female"
-                      name="pet-gender"
-                      type="radio"
-                      value="female"
-                    />
-                    <label for="pet-gender-female">Female</label>
-                    <input
-                      id="pet-gender-male"
-                      name="pet-gender"
-                      type="radio"
-                      value="male"
-                    />
-                    <label for="pet-gender-male">Male</label>
-                  </div>
                 </div>
                 <div class="pets-birthday">
                   <label for="Usia">Usia</label>
@@ -108,12 +127,38 @@ const PMI_Form_Pendonor = () => {
                     id="Usia"
                     name="Usia"
                     placeholder="XXX"
-                    type="text"
+                    type="number"
                     onChange={formik.handleChange}
                     value={formik.values.Usia}
                   ></input>
                   {formik.errors.Usia ? <div>{formik.errors.Usia}</div> : null}
                 </div>
+                <div class="pets-gender">
+                  <label for="gender">Jenis Kelamin</label>
+                  <div class="radio-container">
+                    <input
+                      id="pet-gender-female"
+                      name="JenisKelamin"
+                      type="radio"
+                      value="Perempuan"
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.JenisKelamin==="Perempuan" }
+                    />
+                    <label for="pet-gender-female">Female</label>
+                    <input
+                      id="pet-gender-male"
+                      name="JenisKelamin"
+                      type="radio"
+                      value="Laki Laki"
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.JenisKelamin==="Laki Laki" }
+                    />
+                    <label for="pet-gender-male">Male</label>
+                  </div>
+                  {formik.errors.JenisKelamin ? (
+                    <div>{formik.errors.JenisKelamin}</div>
+                  ) : null}
+                  </div>
               </div>
               <div class="set">
                 <div class="pets-name">
@@ -125,7 +170,9 @@ const PMI_Form_Pendonor = () => {
                     onChange={formik.handleChange}
                     value={formik.values.NoHP}
                     placeholder="+62XXXXXXX"
-                  />
+                  />{formik.errors.NoHP ? (
+                    <div>{formik.errors.NoHP}</div>
+                  ) : null}
                 </div>
                 <div class="pets-name">
                   <label for="Alamat">Alamat</label>
@@ -137,6 +184,9 @@ const PMI_Form_Pendonor = () => {
                     value={formik.values.Alamat}
                     placeholder="Alamat"
                   />
+                  {formik.errors.Alamat ? (
+                    <div>{formik.errors.Alamat}</div>
+                  ) : null}
                 </div>
                 <div class="pets-birthday">
                   <label forhtml="TanggalDonor">Tanggal Donor</label>
@@ -148,6 +198,9 @@ const PMI_Form_Pendonor = () => {
                     onChange={formik.handleChange}
                     value={formik.values.TanggalDonor}
                   ></input>
+                  {formik.errors.TanggalDonor ? (
+                    <div>{formik.errors.TanggalDonor}</div>
+                  ) : null}
                 </div>
               </div>
               <div class="set">
@@ -160,6 +213,9 @@ const PMI_Form_Pendonor = () => {
                     onChange={formik.handleChange}
                     value={formik.values.CabangPMI}
                   />
+                  {formik.errors.CabangPMI ? (
+                    <div>{formik.errors.CabangPMI}</div>
+                  ) : null}
                 </div>
                 <div class="pets-name">
                   <label for="Alamat">Golongan Darah</label>
@@ -169,7 +225,8 @@ const PMI_Form_Pendonor = () => {
                       name="GolonganDarah"
                       type="radio"
                       value="A"
-                      onChange={(e) => (formik.GolonganDarah = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.GolonganDarah==="A" }
                     />
                     <label for="goldar-A">A</label>
                     <input
@@ -177,7 +234,8 @@ const PMI_Form_Pendonor = () => {
                       name="GolonganDarah"
                       type="radio"
                       value="B"
-                      onChange={(e) => (formik.GolonganDarah = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.GolonganDarah==="B" }
                     />
                     <label for="goldar-B">B</label>
                     <input
@@ -185,7 +243,8 @@ const PMI_Form_Pendonor = () => {
                       name="GolonganDarah"
                       type="radio"
                       value="AB"
-                      onChange={(e) => (formik.GolonganDarah = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.GolonganDarah==="AB" }
                     />
                     <label for="goldar-AB">AB</label>
                     <input
@@ -193,39 +252,48 @@ const PMI_Form_Pendonor = () => {
                       name="GolonganDarah"
                       type="radio"
                       value="O"
-                      onChange={(e) => (formik.GolonganDarah = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.GolonganDarah==="O" }
                     />
                     <label for="goldar-O">O</label>
                   </div>
+                  {formik.errors.GolonganDarah ? (
+                    <div>{formik.errors.GolonganDarah}</div>
+                  ) : null}
                 </div>
               </div>
               <div className="set"></div>
               <div className="set">
-                <div class="pets-gender">
+              <div class="pets-gender">
                   <label for="pet-gender-female">Rhesus </label>
                   <div class="radio-container">
                     <input
                       id="RhesusPositif"
-                      name="JenisKelamin"
+                      name="Rhesus"
                       type="radio"
                       value="+"
-                      onChange={(e) => (formik.Rhesus = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.Rhesus==="+" }
                     />
                     <label for="RhesusPositif">+</label>
                     <input
                       id="RhesusNegatif"
-                      name="JenisKelamin"
+                      name="Rhesus"
                       type="radio"
                       value="-"
-                      onChange={(e) => (formik.Rhesus = e.target.value)}
+                      onChange={formik.handleChange}
+                      defaultChecked={formik.values.Rhesus==="-" }
                     />
                     <label for="RhesusNegatif">-</label>
                   </div>
+                  {formik.errors.Rhesus ? (
+                    <div>{formik.errors.Rhesus}</div>
+                  ) : null}
                 </div>
                 <div class="pets-name">
                   <button
+                    type="submit"
                     className="btn-outline-danger bt-sm  px-4 py-1 mt-4"
-                    type="button"
                     onClick={formik.handleSubmit}
                   >
                     Submit

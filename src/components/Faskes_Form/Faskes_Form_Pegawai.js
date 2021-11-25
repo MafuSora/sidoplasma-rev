@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { useFormik } from 'formik';
 const validate = (values) => {
   const errors = {};
-  if (!values.IDPegawai) {
-    errors.IDpegawai = 'Required';
-  } else if (values.IDPegawai.length > 20) {
-    errors.IDpegawai = 'Maksimal 20 Karakter';
+  if (!values.IDPegawaiFaskes) {
+    errors.IDPegawaiFaskes = 'Required';
+  } else if (values.IDPegawaiFaskes.length > 20) {
+    errors.IDPegawaiFaskes = 'Maksimal 20 Karakter';
   }
 
   if (!values.NamaPegawaiFaskes) {
@@ -33,22 +33,10 @@ const validate = (values) => {
     errors.Username = 'Maksimal 115 Karakter';
   }
 
-  if (!values.TanggalSembuh) {
-    errors.TanggalSembuh = 'Required';
-  } else if (values.TanggalSembuh.length > 115) {
-    errors.TanggalSembuh = 'Maksimal 115 Karakter';
-  }
-
-  if (!values.Usia) {
-    errors.Usia = 'Required';
-  } else if (values.Usia.length > 20) {
-    errors.Usia = 'Pilih Jenis Kelamin';
-  }
-
-  if (!values.email) {
-    errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
+  if (!values.Password) {
+    errors.Password = 'Required';
+  } else if (values.Password.length > 115) {
+    errors.Password = 'Maksimal 115 Karakter';
   }
   return errors;
 };
@@ -58,7 +46,7 @@ const Faskes_Form_Pegawai = () => {
 
   const formik = useFormik({
     initialValues: {
-      IDPegawai: '',
+      IDPegawaiFaskes: '',
       NamaPegawaiFaskes: '',
       NamaCabangFaskes: '',
       NoHP: '',
@@ -68,8 +56,10 @@ const Faskes_Form_Pegawai = () => {
     validate,
     onSubmit: (values) => {
       let data = {
-        Nama: values.NamaPegawaiFaskes,
-        No_Handphone: values.NoHP,
+        IDPegawaiFaskes:values.IDPegawaiFaskes,
+        NamaPegawaiFaskes: values.NamaPegawaiFaskes,
+        NamaCabangFaskes: values.NamaCabangFaskes,
+        NoHP: values.NoHP,
         Username: values.Username,
         Password: values.Password,
       };
@@ -100,8 +90,10 @@ const Faskes_Form_Pegawai = () => {
                   placeholder="ID Pegawai Fasilitas Kesehatan"
                   type="text"
                   onChange={formik.handleChange}
-                  value={formik.values.IDpegawai}
-                />
+                  value={formik.values.IDPegawaiFaskes}
+                />{formik.errors.IDPegawaiFaskes ? (
+                  <div>{formik.errors.IDPegawaiFaskes}</div>
+                ) : null}
               </div>
               <div class="pets-name">
                 <label for="NamaPegawaiFaskes">Nama Pegawai Faskes</label>
@@ -112,7 +104,9 @@ const Faskes_Form_Pegawai = () => {
                   type="text"
                   onChange={formik.handleChange}
                   value={formik.values.NamaPegawaiFaskes}
-                />
+                />{formik.errors.NamaPegawaiFaskes ? (
+                  <div>{formik.errors.NamaPegawaiFaskes}</div>
+                ) : null}
               </div>
               <div class="pets-breed">
                 <label for="NamaCabangFaskes">Nama Cabang Faskes</label>
@@ -123,7 +117,9 @@ const Faskes_Form_Pegawai = () => {
                   type="text"
                   onChange={formik.handleChange}
                   value={formik.values.NamaCabangFaskes}
-                />
+                />{formik.errors.NamaCabangFaskes ? (
+                  <div>{formik.errors.NamaCabangFaskes}</div>
+                ) : null}
               </div>
               {/* <div class='pets-name'>
                                     <div></div>
@@ -140,7 +136,9 @@ const Faskes_Form_Pegawai = () => {
                   type="text"
                   onChange={formik.handleChange}
                   value={formik.values.NoHP}
-                ></input>
+                ></input>{formik.errors.NoHP ? (
+                  <div>{formik.errors.NoHP}</div>
+                ) : null}
               </div>
               <div class="pets-birthday">
                 <label for="Username">Username</label>
@@ -151,7 +149,9 @@ const Faskes_Form_Pegawai = () => {
                   type="text"
                   onChange={formik.handleChange}
                   value={formik.values.Username}
-                ></input>
+                ></input>{formik.errors.Username ? (
+                  <div>{formik.errors.Username}</div>
+                ) : null}
               </div>
               <div class="pets-birthday">
                 <label for="Password">Password</label>
@@ -162,13 +162,16 @@ const Faskes_Form_Pegawai = () => {
                   type="password"
                   onChange={formik.handleChange}
                   value={formik.values.Password}
-                ></input>
+                ></input>{formik.errors.Password ? (
+                  <div>{formik.errors.Password}</div>
+                ) : null}
               </div>
               <div class="pets-name">
                 <button
                   className="btn-outline-danger bt-sm  px-4 py-1 mt-4"
-                  onClick={formik.handleSubmit}
                   type="button"
+                  onClick={formik.handleSubmit}
+                  
                 >
                   Submit
                 </button>

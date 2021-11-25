@@ -27,7 +27,7 @@ const Tabel_PMI_Pendonor=(props)=>{
                             <tr>
                                 
                                 <th scope="col">Nama Pendonor</th>
-                                <th scope="col">Nama Pegawai PMI</th>
+                                <th scope="col">Nama Cabang PMI</th>
                                 <th scope="col">Golongan Darah</th>
                                 <th scope="col">Rhesus</th>
                                 <th scope="col">Jenis Kelamin</th>
@@ -42,7 +42,7 @@ const Tabel_PMI_Pendonor=(props)=>{
                             pasien.map((item) => (
                                 <tr>
                                 <th scope="col">{item.NamaPendonor}</th>
-                                <th scope="col">{item.PegawaiPMI}</th>
+                                <th scope="col">{item.CabangPMI}</th>
                                 <th scope="col">{item.GolonganDarah}</th>
                                 <th scope="col">{item.Rhesus}</th>
                                 <th scope="col">{item.JenisKelamin}</th>

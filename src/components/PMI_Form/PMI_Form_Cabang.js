@@ -36,9 +36,9 @@ const PMI_Form_Cabang = () => {
     validate,
     onSubmit: (values) => {
       let data = {
-        Nama_Instansi: values.Nama_PMI,
+        Nama_PMI: values.Nama_PMI,
         Alamat: values.Alamat,
-        No_Telephone: values.NoHP,
+        NoHP: values.NoHP,
       };
 
       fetch(url, {

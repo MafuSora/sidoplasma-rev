@@ -18,6 +18,7 @@ const Tabel_Faskes_Cabang=(props)=>{
         })
         .catch((err) => console.log(err));
     }, []);
+    console.log(pasien)
     return(
         <div className="containutama" >
             <div className="table-responsive p-2">
@@ -35,11 +36,11 @@ const Tabel_Faskes_Cabang=(props)=>{
                             {pasien.length > 0 &&
                             pasien.map((item) => (
                                 <tr>
-                                <th scope="col">{item.IDFaskes}</th>
-                                <th scope="col">{item.Nama_Faskes}</th>
-                                <th scope="col">{item.Jenis_Faskes}</th>
-                                <th scope="col">{item.NoHP}</th>
-                                <th scope="col">{item.Alamat}</th>
+                                <td scope="col">{item.IDFaskes}</td>
+                                <td scope="col">{item.Nama_Faskes}</td>
+                                <td scope="col">{item.Jenis_Faskes}</td>
+                                <td scope="col">{item.NoHP}</td>
+                                <td scope="col">{item.Alamat}</td>
                                 </tr>
                             ))}
                         </tbody>
