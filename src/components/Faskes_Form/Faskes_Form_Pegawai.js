@@ -125,7 +125,6 @@ const Faskes_Form_Pegawai = () => {
                                     <div></div>
                                 </div> */}
             </div>
-            <div class="set"></div>
             <div class="set">
               <div class="pets-birthday">
                 <label for="NoHP">No. Handphone</label>
@@ -166,16 +165,18 @@ const Faskes_Form_Pegawai = () => {
                   <div>{formik.errors.Password}</div>
                 ) : null}
               </div>
+              </div>
+              <div class="set">
               <div class="pets-name">
                 <button
                   className="btn-outline-danger bt-sm  px-4 py-1 mt-4"
-                  type="button"
                   onClick={formik.handleSubmit}
-                  
+                  type="button"
                 >
                   Submit
                 </button>
               </div>
+            
             </div>
           </header>
           {/* <footer>

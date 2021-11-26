@@ -23,7 +23,7 @@ const Footer = () => {
 				<div horizontal >
 					<p class="footer-links px-2">
 						<a href="https://ub.ac.id" className="link-1 " ><strong>Created By</strong></a>
-						<a href="https://www.unitedtractors.com" className="px-4"><strong>Created By</strong></a>
+						<a href="https://www.unitedtractors.com" className="px-4"><strong>Supported By</strong></a>
 						<a href="mailto:sidoplasma@gmail.com?
 										&subject=Report Feedback Or Bug Of Sidoplasma Website">
 											<strong>Contact Us</strong></a>

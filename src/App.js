@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
-import Footer from './components/Footer/footer';
+import Footer from './components/footer/footer';
 import React from 'react';
-import Login from './components/Login/login';
-import Navbar from './components/Navbar/navbar';
+import Login from './components/login/login';
+import Navbar from './components/navbar/navbar';
 import FormPMI from './components/PMI/PMI_Main_Menu';
 import FormFaskes from './components/Faskes/Faskes_Main_Menu';
 import FormAdmin from './components/Admin/Admin_Main_Menu';
@@ -11,10 +11,10 @@ import AboutUs from './components/About_Us/about';
 import TabelPMI from './components/PMI_Tabel_Menu/PMI_Menu_Tabel';
 import TabelFaskes from './components/Faskes_Tabel_Menu/Faskes_Tabel_Menu';
 import TabelAdmin from './components/Admin_Tabel_Menu/Admin_Tabel_Menu';
-import NavbarPMI from './components/Navbar/navbarPMI';
-import NavbarFaskes from './components/Navbar/navbarfaskes';
-import NavbarAdmin from './components/Navbar/navbaradmin';
-import Navbarguest from './components/Navbar/navbarguest';
+import NavbarPMI from './components/navbar/navbarPMI';
+import NavbarFaskes from './components/navbar/navbarfaskes';
+import NavbarAdmin from './components/navbar/navbaradmin';
+import Navbarguest from './components/navbar/navbarguest';
 import {
   BrowserRouter as Router,
   Route,
