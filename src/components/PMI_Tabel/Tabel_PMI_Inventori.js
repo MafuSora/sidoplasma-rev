@@ -1,5 +1,21 @@
 import './Tabel_PMI.css'
 import React, { useEffect, useState } from 'react';
+// import * as whatsappWebJs from "https://cdn.skypack.dev/whatsapp-web.js";
+// const { Client } = require('whatsapp-web.js');
+// const client = new Client();
+
+
+// client.on('qr', (qr) => {
+//     console.log('QR RECEIVED', qr);
+// });
+
+// client.on('ready', () => {
+//     console.log('Client is ready!');
+// });
+
+// client.initialize();
+
+
 const Tabel_PMI_Inventori=(props)=>{
     
     
@@ -99,7 +115,8 @@ const Tabel_PMI_Inventori=(props)=>{
         console.log(dict_invent)
         console.log(temp)
 
-       
+ 
+
         const nopeapos=[]
         const nopeaneg=[]
         const nopebpos=[]
@@ -148,10 +165,24 @@ const Tabel_PMI_Inventori=(props)=>{
         console.log(nopeopos)
         console.log(nopeoneg)
         console.log(cTime)
+        const message='Kami Butuh Plasmamu'
+        function getLinkWhastapp(number, message) {
+            var url = 'https://api.whatsapp.com/send?phone=' 
+                + number 
+                + '&text=' 
+                + encodeURIComponent(message)
+          
+            return window.open(url)
+          }
         function whatsappDialer(cTime) {
-                if (cTime===7) {
-                    if (temp.apos===0) {
+                if (cTime===23) {
+                    if (temp.apos<5) {
                         console.log(nopeapos)
+                        const number='+628815143066'
+                        getLinkWhastapp(number,message)
+                        
+                      
+
                     }
                     else if (temp.aneg===0) {
                         console.log(nopeaneg)
@@ -175,7 +206,7 @@ const Tabel_PMI_Inventori=(props)=>{
                         console.log(nopeoneg)
                 }
         }}
-
+whatsappDialer(cTime)
 
     return(
         <div className="containutama" >

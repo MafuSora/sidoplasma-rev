@@ -12,7 +12,7 @@ const PMI_Main_Menu=(props)=>{
     const radios = [
         { name: 'Pendonor', value: '1'  },
         { name: 'Pegawai PMI', value: '2' },
-        { name: 'PMI', value: '3' },
+        // { name: 'PMI', value: '3' },
         // { name: 'Inventori Plasma', value: '4' },
     ];
     

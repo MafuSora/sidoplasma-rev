@@ -8,13 +8,13 @@
 
 .body {
     align-items: center;
-    background: #D22D16;
+    background: #F7B1AB;
     color: rgba(0, 0, 0, 0.8);
     display: grid;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     font-weight: 400;
-    height: 100vh;
+    /* height: 100vh; */
     justify-items: center;
 
 }
@@ -39,79 +39,32 @@
     max-width: 900px;
     margin: auto;
     margin-top: 2em;
-}
-
-.left-container {
-    background: white;
-    overflow: hidden;
-    padding: 40px 0 0 0;
-    position: relative;
-    text-align: center;
-    width: 300px;
-    margin: 1em;
-}
-
-.left-container h1 {
-    color: rgba(0, 0, 0, 0.8);
-    display: inline-block;
-    font-size: 24px;
-}
-
-.left-container h1 i {
-    background: #D22D16;
-    border-radius: 50%;
-    color: #807182;
-    font-size: 24px;
-    margin-right: 5px;
-    padding: 10px;
-    transform: rotate(-45deg);
-}
-
-.left-container .puppy {
-    bottom: -5px;
-    position: absolute;
-    text-align: center;
-}
-
-.left-container .puppy:before {
-    background: #807182;
-    content: "";
-    height: 100%;
-    left: 0;
-    opacity: 0.4;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-}
-
-.left-container img {
-    filter: sepia(100%);
-    width: 70%;
+    color: #d22d16;
 }
 
 .right-container {
-    background: #D22D16;
+    background: #fff;
     display: grid;
     grid-template-areas: "."".";
     width: 100%;
     padding: 4px;
     margin: 1em;
     border-radius: 10px;
+
 }
 
 .right-container h1:nth-of-type(1) {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 28px;
     font-weight: 600;
-    background: #D22D16
+    /* background: #F9C7C2 */
 }
 
 .right-container .set {
     display: flex;
     justify-content: space-between;
     margin: 10px 0;
-    background:#D22D16
-    
+
 }
 
 .right-container input {
@@ -124,7 +77,7 @@
 
 .right-container input,
 .right-container label {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .right-container header {
@@ -153,7 +106,7 @@
 }
 
 .right-container .pets-photo button i {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 16px;
 }
 
@@ -239,10 +192,14 @@
 }
 
 .radio-container input[type=radio]:checked+label {
-    background: #D22D16;
+    background: #F9C7C2;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .alamat {
     width: 100% !important;
+}
+
+.isi {
+    background-color: #d22d16
 }

@@ -3,7 +3,7 @@ import {ButtonGroup,ToggleButton} from 'react-bootstrap';
 import {useState} from 'react';
 import FaskesFormPasien from '../Faskes_Form/Faskes_Form_Pasien';
 import FaskesFormPegawai from '../Faskes_Form/Faskes_Form_Pegawai';
-import FaskesFormCabang from '../Faskes_Form/Faskes_Form_Cabang';
+// import FaskesFormCabang from '../Faskes_Form/Faskes_Form_Cabang';
 // import FaskesFormPermintaan from '../Faskes_Form/Faskes_Form_Permintaan';
 
 const Faskes_Main_Menu=(props)=>{
@@ -12,7 +12,7 @@ const Faskes_Main_Menu=(props)=>{
     const radios = [
         { name: 'Input Pasien Positif', value: '1'  },
         { name: 'Input Pegawai Fasilitas Kesehatan', value: '2' },
-        { name: 'Input Fasilitas Kesehatan', value: '3' },
+        // { name: 'Input Fasilitas Kesehatan', value: '3' },
         // { name: 'Permintaan Donor Plasma', value: '4' },
     ];
     return(
@@ -54,7 +54,7 @@ const Faskes_Main_Menu=(props)=>{
                 <div>
                     {name==="1" && <FaskesFormPasien/>}
                     {name==="2" && <FaskesFormPegawai/>}
-                    {name==="3" && <FaskesFormCabang/>}
+                    {/* {name==="3" && <FaskesFormCabang/>} */}
                     {/* {name==="4" && <FaskesFormPermintaan/>} */}
                 </div>
             </div>

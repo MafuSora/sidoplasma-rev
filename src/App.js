@@ -1,15 +1,20 @@
 // import logo from './logo.svg';
 import './App.css';
-import Footer from './components/footer/footer';
+import Footer from './components/Footer/footer';
 import React from 'react';
-import Login from './components/login/login';
-import Navbar from './components/navbar/navbar';
+import Login from './components/Login/login';
+import Navbar from './components/Navbar/navbar';
 import FormPMI from './components/PMI/PMI_Main_Menu';
 import FormFaskes from './components/Faskes/Faskes_Main_Menu';
+import FormAdmin from './components/Admin/Admin_Main_Menu';
 import AboutUs from './components/About_Us/about';
 import TabelPMI from './components/PMI_Tabel_Menu/PMI_Menu_Tabel';
 import TabelFaskes from './components/Faskes_Tabel_Menu/Faskes_Tabel_Menu';
-import Navbarguest from './components/navbar/navbarguest';
+import TabelAdmin from './components/Admin_Tabel_Menu/Admin_Tabel_Menu';
+import NavbarPMI from './components/Navbar/navbarPMI';
+import NavbarFaskes from './components/Navbar/navbarfaskes';
+import NavbarAdmin from './components/Navbar/navbaradmin';
+import Navbarguest from './components/Navbar/navbarguest';
 import {
   BrowserRouter as Router,
   Route,
@@ -18,6 +23,7 @@ import {
 } from 'react-router-dom';
 import { useAuth } from './auth/auth-hook';
 import { AuthContext } from './auth/auth-context';
+
 
 function App() {
   const { token, login, logout, role } = useAuth();
@@ -41,24 +47,33 @@ function App() {
                   <AboutUs />
                   {/* <Gerbong/> */}
                 </Route>
+                <Route path="/FormAdmin">
+                  <NavbarAdmin />
+                  <FormAdmin />
+                </Route>
+
+                <Route path="/TabelAdmin">
+                  <NavbarAdmin />
+                  <TabelAdmin />
+                </Route>
 
                 <Route path="/FormPMI">
-                  <Navbar />
+                  <NavbarPMI />
                   <FormPMI />
                 </Route>
 
                 <Route path="/FormFaskes">
-                  <Navbar />
+                  <NavbarFaskes />
                   <FormFaskes />
                 </Route>
 
                 <Route path="/TabelPMI">
-                  <Navbar />
+                  <NavbarPMI />
                   <TabelPMI></TabelPMI>
                 </Route>
 
                 <Route path="/TabelFaskes">
-                  <Navbar />
+                  <NavbarFaskes />
                   <TabelFaskes></TabelFaskes>
                 </Route>
 

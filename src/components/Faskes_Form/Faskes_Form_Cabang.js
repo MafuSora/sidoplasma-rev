@@ -70,7 +70,7 @@ const Faskes_Form_Cabang = () => {
     <div className="containutama">
       <div class="signup-container">
         <div class="right-container">
-          <header>
+          <header className="isi">
             <h1>Input Data Fasilitas Kesehatan</h1>
             <br />
             <div class="set">

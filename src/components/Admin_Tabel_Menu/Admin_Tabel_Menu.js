@@ -1,24 +1,25 @@
-import './Admin_Main_Menu.css'
+import './Admin_Tabel_Menu.css'
 import {ButtonGroup,ToggleButton} from 'react-bootstrap';
 import {useState} from 'react';
-import FaskesFormPasien from '../Faskes_Form/Faskes_Form_Pasien';
-import FaskesFormPegawai from '../Faskes_Form/Faskes_Form_Pegawai';
-import FaskesFormCabang from '../Faskes_Form/Faskes_Form_Cabang';
-import FormPMIPendonor from '../PMI_Form/PMI_Form_Pendonor';
-import FormPMIPegawai from '../PMI_Form/PMI_Form_Pegawai';
-import FormPMICabang from '../PMI_Form/PMI_Form_Cabang';
-// import FaskesFormPermintaan from '../Faskes_Form/Faskes_Form_Permintaan';
-
-const Faskes_Main_Menu=(props)=>{
+import TabelFaskesPasien from '../Faskes_Tabel/Tabel_Faskes_Pasien';
+import TabelFaskesPegawai from '../Faskes_Tabel/Tabel_Faskes_Pegawai';
+import TabelFaskesCabang from '../Faskes_Tabel/Tabel_Faskes_Cabang';
+import TabelPMIPendonor from '../PMI_Tabel/Tabel_PMI_Pendonor';
+import TabelPMIPegawai from '../PMI_Tabel/Tabel_PMI_Pegawai';
+import TabelPMICabang from '../PMI_Tabel/Tabel_PMI_Cabang';
+import TabelPMIInventori from '../PMI_Tabel/Tabel_PMI_Inventori';
+// import TabelFaskesPermintaan from '../Faskes_Tabel/Tabel_Faskes_Permintaan';
+const Faskes_Tabel_Menu=(props)=>{
     const [radioValue, setRadioValue] = useState('1');
     const [name,setName]=useState("1")
     const radios = [
-        { name: 'Input Pasien Positif', value: '1'  },
-        { name: 'Input Pegawai Fasilitas Kesehatan', value: '2' },
-        { name: 'Input Fasilitas Kesehatan', value: '3' },
-        { name: 'Pendonor', value: '4'  },
-        { name: 'Pegawai PMI', value: '5' },
-        { name: 'PMI', value: '6' },
+        { name: 'Tabel Pasien Positif', value: '1'  },
+        { name: 'Tabel Pegawai Fasilitas Kesehatan', value: '2' },
+        { name: 'Tabel Fasilitas Kesehatan', value: '3' },
+        { name: 'Tabel Pendonor', value: '4'  },
+        { name: 'Tabel Pegawai PMI', value: '5' },
+        { name: 'Tabel PMI', value: '6' },
+        { name: 'Tabel Inventori Plasma', value: '7' },
         // { name: 'Permintaan Donor Plasma', value: '4' },
     ];
     return(
@@ -58,17 +59,19 @@ const Faskes_Main_Menu=(props)=>{
                     </div>
                 </div>
                 <div>
-                    {name==="1" && <FaskesFormPasien/>}
-                    {name==="2" && <FaskesFormPegawai/>}
-                    {name==="3" && <FaskesFormCabang/>}
-                    {name==="4" && <FormPMIPendonor/>}
-                    {name==="5" && <FormPMIPegawai/>}
-                    {name==="6" && <FormPMICabang/>}
-                    {/* {name==="4" && <FaskesFormPermintaan/>} */}
+                    {name==="1" && <TabelFaskesPasien/>}
+                    {name==="2" && <TabelFaskesPegawai/>}
+                    {name==="3" && <TabelFaskesCabang/>}
+                    {name==="4" && <TabelPMIPendonor/>}
+                    {name==="5" && <TabelPMIPegawai/>}
+                    {name==="6" && <TabelPMICabang/>}
+                    {name==="7" && <TabelPMIInventori/>}
+                    
+                    {/* {name==="4" && <TabelFaskesPermintaan/>} */}
                 </div>
             </div>
         </div>
     
     );
 }
-export default Faskes_Main_Menu
+export default Faskes_Tabel_Menu

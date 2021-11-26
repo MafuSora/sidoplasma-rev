@@ -15,6 +15,7 @@ const Login = () => {
     const data = {
       'pmi@gmail.com': 'pmi',
       'faskes@gmail.com': 'faskes',
+      'faskes@gmail.com': 'faskes',
     };
 
     if (!email in data) {
@@ -45,8 +46,11 @@ const Login = () => {
         auth.login(res.sessionToken, role);
         if (role === 'pmi') {
           history.replace('/FormPMI');
-        } else {
-          history.replace('/FormFaskes');
+        } 
+        else if (role === 'faskes'){
+          history.replace('/FormFaskes');}
+        else{
+          throw "error"
         }
       })
       .catch((err) => console.log(err));
