@@ -20,7 +20,7 @@ const Tabel_Faskes_Pasien = (props) => {
         setPasien(data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [pasien]);
   const headers = { 'X-Parse-Application-Id': 'MyAPPID' };
   const handleDelete=(ID)=>{
       const url2 = url + '/'+ ID

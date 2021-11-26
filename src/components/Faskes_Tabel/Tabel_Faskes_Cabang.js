@@ -17,7 +17,7 @@ const Tabel_Faskes_Cabang=(props)=>{
             setPasien(data);
         })
         .catch((err) => console.log(err));
-    }, []);
+    }, [pasien]);
     console.log(pasien)
     const headers = { 'X-Parse-Application-Id': 'MyAPPID' };
     const handleDelete=(ID)=>{
