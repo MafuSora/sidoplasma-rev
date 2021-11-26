@@ -127,7 +127,7 @@ const PMI_Form_Pendonor = () => {
                     id="Usia"
                     name="Usia"
                     placeholder="XXX"
-                    type="text"
+                    type="number"
                     onChange={formik.handleChange}
                     value={formik.values.Usia}
                   ></input>
@@ -292,9 +292,9 @@ const PMI_Form_Pendonor = () => {
                 </div>
                 <div class="pets-name">
                   <button
-                    type="submit"
                     className="btn-outline-danger bt-sm  px-4 py-1 mt-4"
                     onClick={formik.handleSubmit}
+                    type="button"
                   >
                     Submit
                   </button>
@@ -302,12 +302,6 @@ const PMI_Form_Pendonor = () => {
               </div>
             </form>
           </header>
-          <footer>
-            <div class="set">
-              <button id="back">Back</button>
-              <button id="next">Next</button>
-            </div>
-          </footer>
         </div>
       </div>
     </div>

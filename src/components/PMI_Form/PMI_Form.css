@@ -34,6 +34,7 @@
     width: 100%;
     padding: 4px;
     margin: 1em;
+    color: black;
 }
 
 .right-container h1:nth-of-type(1) {
@@ -141,6 +142,7 @@
 .pets-weight label {
     display: block;
     margin-bottom: 5px;
+    color: black;
 }
 
 .radio-container {
