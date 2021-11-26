@@ -51,8 +51,8 @@ const validate = (values) => {
 
   if (!values.Usia) {
     errors.Usia = 'Required';
-  } else if (values.Usia > 3) {
-    errors.Usia = 'Maksimal 3 Karakter';
+  } else if (values.Usia > 200) {
+    errors.Usia = 'Pilih Jenis Kelamin';
   }
 
 
@@ -127,7 +127,7 @@ const PMI_Form_Pendonor = () => {
                     id="Usia"
                     name="Usia"
                     placeholder="XXX"
-                    type="text"
+                    type="number"
                     onChange={formik.handleChange}
                     value={formik.values.Usia}
                   ></input>
