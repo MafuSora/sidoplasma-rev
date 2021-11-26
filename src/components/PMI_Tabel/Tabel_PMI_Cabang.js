@@ -17,7 +17,7 @@ const Tabel_PMI_Cabang=(props)=>{
             setPasien(data);
         })
         .catch((err) => console.log(err));
-    }, []);
+    }, [pasien]);
     
     
     const headers = { 'X-Parse-Application-Id': 'MyAPPID' };

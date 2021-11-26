@@ -51,8 +51,8 @@ const validate = (values) => {
 
   if (!values.Usia) {
     errors.Usia = 'Required';
-  } else if (values.Usia > 3) {
-    errors.Usia = 'Maksimal 3 Karakter';
+  } else if (values.Usia > 200) {
+    errors.Usia = 'Pilih Jenis Kelamin';
   }
 
 

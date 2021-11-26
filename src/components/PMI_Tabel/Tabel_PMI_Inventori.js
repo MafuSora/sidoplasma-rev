@@ -37,7 +37,7 @@ const Tabel_PMI_Inventori=(props)=>{
             })
             .catch((err) => console.log(err));
             
-        }, []);
+        }, [pasien]);
         function addMonths(date, months) {
             var d = date.getDate();
             date.setMonth(date.getMonth() + +months);
@@ -167,7 +167,7 @@ const Tabel_PMI_Inventori=(props)=>{
         console.log(cTime)
         const message='Kami Butuh Plasmamu'
         function getLinkWhastapp(number, message) {
-            var url = 'https://api.whatsapp.com/send?phone=' 
+            var url = 'https://web.whatsapp.com/send?phone=' 
                 + number 
                 + '&text=' 
                 + encodeURIComponent(message)
@@ -175,12 +175,12 @@ const Tabel_PMI_Inventori=(props)=>{
             return window.open(url)
           }
         function whatsappDialer(cTime) {
-                if (cTime===23) {
+                if (cTime===14) {
                     if (temp.apos<5) {
                         console.log(nopeapos)
                         const number='+628815143066'
                         getLinkWhastapp(number,message)
-                        
+                        document.getElementsById("_4sWnG").click();
                       
 
                     }
