@@ -16,6 +16,7 @@ const Login = () => {
       'pmi@gmail.com': 'pmi',
       'faskes@gmail.com': 'faskes',
       'faskes@gmail.com': 'faskes',
+      'admin@gmail.com': 'admin',
     };
 
     if (!email in data) {
@@ -46,14 +47,17 @@ const Login = () => {
         auth.login(res.sessionToken, role);
         if (role === 'pmi') {
           history.replace('/FormPMI');
-        } 
-        else if (role === 'faskes'){
-          history.replace('/FormFaskes');}
-        else{
-          throw "error"
+        } else if (role === 'faskes') {
+          history.replace('/FormFaskes');
+        } else if (role === 'admin') {
+          history.replace('/FormAdmin');
+        } else {
+          throw new Error('Invalid user credentials');
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        alert('Invalid username or password');
+      });
   };
 
   return (
