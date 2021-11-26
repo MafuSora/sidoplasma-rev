@@ -55,6 +55,7 @@ const Tabel_PMI_Pendonor=(props)=>{
                                 <th scope="col">Usia</th>
                                 <th scope="col">Alamat</th>
                                 <th scope="col">No Handphone</th>
+                                <th scope="col">Link Hasil Plasma</th>
                                 <th scope="col">Tanggal Donor</th>
                                 <th scope="col">Tanggal Kadaluarsa</th>
                                 <th scope="col">Status</th>
@@ -73,6 +74,7 @@ const Tabel_PMI_Pendonor=(props)=>{
                                 <th scope="col">{item.Usia}</th>
                                 <th scope="col">{item.Alamat}</th>
                                 <th scope="col">{item.NoHP}</th>
+                                <th scope="col"><a href={`//${item.LinkPlasma}`}>File</a></th>
                                 <th scope="col">{item.TanggalDonor}</th>
                                 <th scope="col">{addMonths(new Date(item.TanggalDonor),3).toISOString()}</th>
                                 <th scope="col">{current.toISOString() < addMonths(new Date(item.TanggalDonor),3).toISOString()?<div>Available</div>:<div>Expired</div>}</th>

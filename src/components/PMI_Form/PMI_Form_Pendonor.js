@@ -49,10 +49,16 @@ const validate = (values) => {
     errors.TanggalDonor = 'Maksimal 115 Karakter';
   }
 
+  if (!values.LinkPlasma) {
+    errors.LinkPlasma = 'Required';
+  } else if (values.LinkPlasma.length > 115) {
+    errors.LinkPlasma = 'Maksimal 115 Karakter';
+  }
+
   if (!values.Usia) {
     errors.Usia = 'Required';
-  } else if (values.Usia > 3) {
-    errors.Usia = 'Maksimal 3 Karakter';
+  } else if (values.Usia > 200) {
+    errors.Usia = 'Pilih Jenis Kelamin';
   }
 
 
@@ -73,6 +79,7 @@ const PMI_Form_Pendonor = () => {
       GolonganDarah: '',
       Rhesus: '',
       CabangPMI: '',
+      LinkPlasma:''
     },
     validate,
     onSubmit: (values) => {
@@ -86,6 +93,7 @@ const PMI_Form_Pendonor = () => {
         GolonganDarah: values.GolonganDarah,
         Rhesus: values.Rhesus,
         CabangPMI: values.CabangPMI,
+        LinkPlasma:values.LinkPlasma,
       };
 
       fetch(url, {
@@ -127,7 +135,7 @@ const PMI_Form_Pendonor = () => {
                     id="Usia"
                     name="Usia"
                     placeholder="XXX"
-                    type="text"
+                    type="number"
                     onChange={formik.handleChange}
                     value={formik.values.Usia}
                   ></input>
@@ -288,6 +296,20 @@ const PMI_Form_Pendonor = () => {
                   </div>
                   {formik.errors.Rhesus ? (
                     <div>{formik.errors.Rhesus}</div>
+                  ) : null}
+                </div>
+                <div class="pets-name">
+                  <label for="LinkPlasma">Hasil Tes Plasma</label>
+                  <input
+                    id="LinkPlasma"
+                    name="LinkPlasma"
+                    type="text"
+                    onChange={formik.handleChange}
+                    value={formik.values.LinkPlasma}
+                    placeholder="Link Drive Hasil Tes Plasma"
+                  />
+                  {formik.errors.LinkPlasma ? (
+                    <div>{formik.errors.LinkPlasma}</div>
                   ) : null}
                 </div>
                 <div class="pets-name">

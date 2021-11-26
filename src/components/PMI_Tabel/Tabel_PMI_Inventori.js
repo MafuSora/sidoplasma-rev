@@ -1,5 +1,6 @@
 import './Tabel_PMI.css'
 import React, { useEffect, useState } from 'react';
+import $ from 'jquery'
 // import * as whatsappWebJs from "https://cdn.skypack.dev/whatsapp-web.js";
 // const { Client } = require('whatsapp-web.js');
 // const client = new Client();
@@ -18,7 +19,27 @@ import React, { useEffect, useState } from 'react';
 
 const Tabel_PMI_Inventori=(props)=>{
     
-    
+    $(document).keydown(function(event){
+            if(event.keyCode === 13){                
+                alert("keypressed");
+            }
+        });
+
+    function clickevent()
+    {                
+    var e = $.Event("keydown");
+    e.which = 13;
+    e.keyCode = 13;
+    $(document).trigger(e);     
+    } 
+    // var a = setTimeout(fun1, 2000);
+    // function fun1()
+    // {
+    // var win1 = window.open();
+    // win1.document.write(" <h2> Welcome to the javaTpoint.com </h2>");
+    // setTimeout(function(){win1.close()}, 2000);
+    // }
+
     const url = 'https://appsa.awanpintar.com/classes/Pendonor';
         const header = { 'X-Parse-Application-Id': 'MyAPPID' };
         
@@ -49,6 +70,7 @@ const Tabel_PMI_Inventori=(props)=>{
         let current = new Date();
         let cTime = current.getHours() ;
         // console.log(cTime);
+       
         function genderCount(pasien) {
             return pasien.reduce((acc, pasien) => {
                 
@@ -172,17 +194,21 @@ const Tabel_PMI_Inventori=(props)=>{
                 + '&text=' 
                 + encodeURIComponent(message)
           
-            return window.open(url)
+            return url
           }
         function whatsappDialer(cTime) {
-                if (cTime===14) {
+                if (cTime===21) {
                     if (temp.apos<5) {
                         console.log(nopeapos)
-                        const number='+628815143066'
-                        getLinkWhastapp(number,message)
-                        document.getElementsById("_4sWnG").click();
-                      
-
+                        // const number='+628815143066'
+                        // var win1=window.open(getLinkWhastapp(number,message),"win1")
+                        // var e = $.Event("keydown");
+                        // e.which = 13;
+                        // e.keyCode = 13;
+                        // setTimeout(function(){$(win1).trigger(e)},2000000000);
+                        // console.log("gagal")
+                        // eventFire(document.querySelector('span[data-icon="send"]'), 'click')
+                        // console.log(e.keyCode === 13)                 
                     }
                     else if (temp.aneg===0) {
                         console.log(nopeaneg)
@@ -206,7 +232,7 @@ const Tabel_PMI_Inventori=(props)=>{
                         console.log(nopeoneg)
                 }
         }}
-whatsappDialer(cTime)
+        setTimeout(whatsappDialer(cTime),400000)
 
     return(
         <div className="containutama" >
