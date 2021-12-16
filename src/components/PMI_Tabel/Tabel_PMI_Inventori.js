@@ -226,7 +226,7 @@ const Tabel_PMI_Inventori=(props)=>{
                 }
         }}
         setTimeout(whatsappDialer(cTime),400000)
-        const { config } = require('./config');
+        // const { config } = require('./config');
 
 // const accountSid = config.sid;
 // const authToken = config.token;
