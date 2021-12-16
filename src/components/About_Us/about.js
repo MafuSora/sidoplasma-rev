@@ -23,7 +23,11 @@ const Faskes_Konten_1=()=>{
                     <div className="carousel-caption d-none d-md-block">
                         {/* <img src="https://i.pinimg.com/564x/22/2e/40/222e4048c228885608cc11aa7cc608b2.jpg" className="carousel slide m-4 rounded ukuran" alt="..." className="suntik"/> */}
                         <h1 className="tulisanlanding">Selamat Datang</h1>
-                        <p className="tulisanlanding">Sidoplasma merupakan website yang terintegrasi dengan auto message digunakan untuk pendataan calon pendonor plasma konvalesen COVID-19 oleh berbagai fasilitas kesehatan dan dapat diakses oleh Palang Merah Indonesia (PMI).</p>
+                        <p className="tulisanlanding">Sidoplasma merupakan website yang 
+                        terintegrasi dengan auto message digunakan untuk pendataan calon 
+                        pendonor dan pendonor plasma konvalesen COVID-19 oleh berbagai 
+                        fasilitas kesehatan dan dapat diakses 
+                        oleh Palang Merah Indonesia (PMI) yang betujuan untuk membantu distribusi kebutuhan plasma </p>
                         <a href="/login" className="btn btn-lg btn-danger"> Gabung Sekarang </a>
                     </div>
                 </div>  
@@ -38,7 +42,9 @@ const Faskes_Konten_1=()=>{
                                     <Card.Title className="judulkartu">Kontak Kami!</Card.Title>
                                     <Card.Text className="tulisankartu ">
                                         Kontak kami melalui email <a href="mailto:sidoplasma@gmail.com?
-										&subject=Contact Us For Register">sidoplasmateam@gmail.com</a> dengan menyerahkan beberapa dokumen yang membuktikan bahwa anda berasal dari fasilitas kesehatan yang telah diakui oleh pemerintah
+										&subject=Contact Us For Register">sidoplasmateam@gmail.com</a> dengan menyerahkan beberapa dokumen 
+                                        (Scan Nomor Induk Berusaha, dan scan KTP penanggungjawab)
+                                        yang membuktikan bahwa anda berasal dari fasilitas kesehatan yang telah diakui oleh pemerintah
                                     </Card.Text>
                                     </Card.Body>
                                     <Card.Footer>
