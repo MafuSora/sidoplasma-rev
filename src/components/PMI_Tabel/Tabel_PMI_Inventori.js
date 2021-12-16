@@ -228,32 +228,32 @@ const Tabel_PMI_Inventori=(props)=>{
         setTimeout(whatsappDialer(cTime),400000)
         const { config } = require('./config');
 
-const accountSid = config.sid;
-const authToken = config.token;
-const client = require('twilio') (accountSid, authToken);
+// const accountSid = config.sid;
+// const authToken = config.token;
+// const client = require('twilio') (accountSid, authToken);
 
-client.messages.create({
-    from: 'whatsapp:+628815143066',
-    body: 'Hello world this is CarlosVldz!!!',
-    to: 'whatsapp:+628815143066'
-}).then(message => console.log(message.sid));
-        function sendwa() {
+// client.messages.create({
+//     from: 'whatsapp:+628815143066',
+//     body: 'Hello world this is CarlosVldz!!!',
+//     to: 'whatsapp:+628815143066'
+// }).then(message => console.log(message.sid));
+//         function sendwa() {
                        
-                        var win1=window.open(getLinkWhastapp(number,message),"win1")
-                        var e = $.Event("keydown");
-                        e.which = 13;
-                        e.keyCode = 13;
-                        setTimeout(window.open(getLinkWhastapp(number,message)),2000);
-                        const el = win1.querySelector("button._4sWnG");
-                        console.log(el); 
-                        console.log("gagal")
-                        win1.querySelector("button._4sWnG").addEventListener('click');
-                        // document.querySelector('span[data-icon="send"]'), 'click'
-                        // eventFire(document.querySelector('span[data-icon="send"]'), 'click')
+//                         var win1=window.open(getLinkWhastapp(number,message),"win1")
+//                         var e = $.Event("keydown");
+//                         e.which = 13;
+//                         e.keyCode = 13;
+//                         setTimeout(window.open(getLinkWhastapp(number,message)),2000);
+//                         const el = win1.querySelector("button._4sWnG");
+//                         console.log(el); 
+//                         console.log("gagal")
+//                         win1.querySelector("button._4sWnG").addEventListener('click');
+//                         // document.querySelector('span[data-icon="send"]'), 'click'
+//                         // eventFire(document.querySelector('span[data-icon="send"]'), 'click')
 
-                        console.log(e.keyCode === 13)  
-        }
-        setTimeout(sendwa(),400000)
+//                         console.log(e.keyCode === 13)  
+//         }
+//         setTimeout(sendwa(),400000)
        
     return(
         <div className="containutama" >
