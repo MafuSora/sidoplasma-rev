@@ -15,7 +15,6 @@ const Login = () => {
     const data = {
       'pmi@gmail.com': 'pmi',
       'faskes@gmail.com': 'faskes',
-      'faskes@gmail.com': 'faskes',
       'admin@gmail.com': 'admin',
     };
 
