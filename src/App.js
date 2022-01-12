@@ -24,9 +24,10 @@ import {
 import { useAuth } from './auth/auth-hook';
 import { AuthContext } from './auth/auth-context';
 
-
 function App() {
   const { token, login, logout, role } = useAuth();
+
+  console.log('fitur pencarian');
 
   return (
     <AuthContext.Provider
